@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olivier de Gaay Fortman</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background: #f8f9fa;
+      color: #222;
+    }
+    #main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h3 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    a {
+      text-decoration: none;
+      color: #0056b3;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .toggle {
+      cursor: pointer;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    .abstract {
+      display: none;
+      margin: 0.5rem 0 1rem 0;
+      padding-left: 1rem;
+      border-left: 2px solid #ddd;
+      color: #444;
+    }
+    .profile-img {
+      float: left;
+      margin-right: 20px;
+      width: 180px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div class="clearfix">
+      <img src="olivierfortman.jpg" alt="Olivier de Gaay Fortman" class="profile-img" />
+      <h1>Olivier de Gaay Fortman</h1>
+      <p><i>Postdoc in Algebraic Geometry</i><br>
+      Department of Mathematics, Utrecht University<br>
+      a.o.d.degaayfortman((at))uu.nl</p>
+    </div>
+
+    <h3>Research Papers</h3>
+    <ul>
+      <li>
+        <a href="https://arxiv.org/abs/2504.13642">Descent for algebraic stacks</a> (2025)
+        <span class="toggle" onclick="toggleAbstract(this)">[+]</span>
+        <div class="abstract">
+          We prove that algebraic stacks satisfy 2-descent for fppf coverings... (abstract text continues)
+        </div>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2504.02720">On the topology of real algebraic stacks</a> (with Emiliano Ambrosi, 2025)
+        <span class="toggle" onclick="toggleAbstract(this)">[+]</span>
+        <div class="abstract">
+          Motivated by questions arising in the theory of moduli spaces... (abstract text continues)
+        </div>
+      </li>
+      <!-- More papers listed similarly -->
+    </ul>
+
+    <h3>PhD Thesis</h3>
+    <ul>
+      <li>
+        <a href="https://arxiv.org/pdf/2211.02710.pdf">Moduli spaces and algebraic cycles in real algebraic geometry</a>
+        <span class="toggle" onclick="toggleAbstract(this)">[+]</span>
+        <div class="abstract">
+          This thesis intends to make a contribution to the theories of algebraic cycles... (abstract text continues)
+        </div>
+      </li>
+    </ul>
+
+    <h3>Teaching</h3>
+    <ul>
+      <li>
+        <i>Algebraic Geometry II</i> (May–July 2024). Lecturer. <a href="AGII-part2-degaayfortman.pdf">Course Notes</a>
+      </li>
+      <!-- Additional courses here -->
+    </ul>
+  </div>
+
+  <script>
+    function toggleAbstract(el) {
+      const abstract = el.nextElementSibling;
+      const isOpen = abstract.style.display === 'block';
+      abstract.style.display = isOpen ? 'none' : 'block';
+      el.innerText = isOpen ? '[+]' : '[-]';
+    }
+  </script>
+</body>
+</html>
