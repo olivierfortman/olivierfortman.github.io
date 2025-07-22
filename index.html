@@ -10,6 +10,32 @@
 　　 a:visited { text-decoration: none;color: black}
 	
 　　 -－> 
+
+<style>
+#intro-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+#intro-container .column {
+  flex: 1;
+  min-width: 200px;
+}
+
+#intro-container .photo img {
+  border-radius: 6px;
+}
+
+#intro-container .bio p {
+  margin: 0;
+  text-align: justify;
+}
+</style>
+
+	    
 　　 </style>
 
 
@@ -443,27 +469,31 @@ function toggle(abs_tr) {
 Personal Webpage
 </div>
 
-<img src="photoweb.jpg"style="padding:20px;" align="left" width="230"/>
+<div id="intro-container">
+  <div class="column photo">
+    <img src="photoweb.jpg" style="width: 100%; max-width: 230px;">
+  </div>
 
-<div class="address">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b><font size=5px;
-    face=Helvetica, color=#000080>Olivier de Gaay Fortman</font></b> <br></b> <br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <i><font color=#000080> Postdoc in Algebraic Geometry </font></i><br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Department of Mathematics <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Utrecht University <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Budapestlaan 6, 3584 CD  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Utrecht, The Netherlands <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Room number: 4.08 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <i>Email: a.o.d.degaayfortman((at))uu.nl </i><br>
-<br>
+  <div class="column contact">
+    <b style="font-size: 1.5em; color: #000080;">Olivier de Gaay Fortman</b><br><br>
+    <i style="color: #000080;">Postdoc in Algebraic Geometry</i><br><br>
+    Department of Mathematics<br>
+    Utrecht University<br>
+    Budapestlaan 6, 3584 CD<br>
+    Utrecht, The Netherlands<br>
+    Room number: 4.08<br><br>
+    <i>Email: a.o.d.degaayfortman((at))uu.nl</i>
+  </div>
 
-	
-<p style="text-align:right;"> I am a postdoc in Algebraic Geometry at the University of Utrecht, mentored by Martijn Kool. Before, between 2022 and 2024, I 
-	was doing a postdoc at the Institute of Algebraic Geometry in Hannover, mentored by Stefan Schreieder. 
-	Between 2019 and 2022, I did my PhD at the ENS in Paris, under the supervision of Olivier Benoist. 
-</p>
+  <div class="column bio">
+    <p>
+      I am a postdoc in Algebraic Geometry at the University of Utrecht, mentored by Martijn Kool. Before, between 2022 and 2024, I 
+      was doing a postdoc at the Institute of Algebraic Geometry in Hannover, mentored by Stefan Schreieder. 
+      Between 2019 and 2022, I did my PhD at the ENS in Paris, under the supervision of Olivier Benoist. 
+    </p>
+  </div>
 </div>
+
 
 <h3> Research papers </h3>
 
