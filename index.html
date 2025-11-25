@@ -1,774 +1,781 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-    
-<style>
-/* padding */
+<html>
 
-#main {
-  padding: 0 16px;
-}
+  <head>
 
-	
-  /* Link styles */
-  a:link {
-    text-decoration: none;
-    color: blue;
-  }
-
-  a:active {
-  color: blue;
-  text-decoration: none;
-}
-
-  a:hover {
-    text-decoration: underline;
-    color: blue;
-  }
-
-  a:visited {
-    text-decoration: none;
-    color: blue;
-  }
-
-  /* Intro section layout */
-#intro-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  align-items: flex-start;
-}
-
-  #intro-container .column {
-    flex: 1;
-    min-width: 200px;
-  }
-
-  #intro-container .photo img {
-    border-radius: 6px;
-  }
-
-  #intro-container .bio p {
-    margin: 0;
-    text-align: justify;
-  }
-</style>
-
-
-
-<title>Olivier de Gaay Fortman's Homepage</title>
-<!-- link to main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="main.css">
-    
     <style>
-	 
-p.a {
-    font-style: normal;
-}
+      /* padding */
 
-p.b {
-    font-style: italic;
-}
-
-p.c {
-    font-style: oblique;
-}
-
-	    body {
-    transform: scale(0.9); /* Adjust as needed */
-    transform-origin: top left;
-    width: 111%; /* Compensate for scaling */
-}
-	    
-</style>
-
-<style>
-  .visi1 { visibility:"visible" }
-  .visi2 { visibility:"hidden" }
-  .disp1 { display:"block" }
-  .disp2 { display:"none" }
-
-.div_show
-{
-display:block;
-margin-top:5px;
-margin-left:5px;
-margin-bottom:5px;
-margin-right:80px;
-padding:8px;
-background:#EFF5E0;
-border:solid 1px #c3c3c3;
-
-}
-.div_hide
-{
-display:none;
-}
-</style>
-
-<script language="javaScript">
-function showHideText1()
-{
-if (document.getElementById("div_text1").className == "div_hide")
-{
-document.getElementById("div_text1").className = "div_show";
-document.getElementById("my_text1").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text1").className = "div_hide";
-document.getElementById("my_text1").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText2()
-{
-if (document.getElementById("div_text2").className == "div_hide")
-{
-document.getElementById("div_text2").className = "div_show";
-document.getElementById("my_text2").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text2").className = "div_hide";
-document.getElementById("my_text2").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText3()
-{
-if (document.getElementById("div_text3").className == "div_hide")
-{
-document.getElementById("div_text3").className = "div_show";
-document.getElementById("my_text3").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text3").className = "div_hide";
-document.getElementById("my_text3").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText4()
-{
-if (document.getElementById("div_text4").className == "div_hide")
-{
-document.getElementById("div_text4").className = "div_show";
-document.getElementById("my_text4").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text4").className = "div_hide";
-document.getElementById("my_text4").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText5()
-{
-if (document.getElementById("div_text5").className == "div_hide")
-{
-document.getElementById("div_text5").className = "div_show";
-document.getElementById("my_text5").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text5").className = "div_hide";
-document.getElementById("my_text5").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText6()
-{
-if (document.getElementById("div_text6").className == "div_hide")
-{
-document.getElementById("div_text6").className = "div_show";
-document.getElementById("my_text6").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text6").className = "div_hide";
-document.getElementById("my_text6").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText7()
-{
-if (document.getElementById("div_text7").className == "div_hide")
-{
-document.getElementById("div_text7").className = "div_show";
-document.getElementById("my_text7").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text7").className = "div_hide";
-document.getElementById("my_text7").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText8()
-{
-if (document.getElementById("div_text8").className == "div_hide")
-{
-document.getElementById("div_text8").className = "div_show";
-document.getElementById("my_text8").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text8").className = "div_hide";
-document.getElementById("my_text8").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText9()
-{
-if (document.getElementById("div_text9").className == "div_hide")
-{
-document.getElementById("div_text9").className = "div_show";
-document.getElementById("my_text9").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text9").className = "div_hide";
-document.getElementById("my_text9").innerText = "[+]";
-}
-}
-</script>
-
-<script language="javaScript">
-function showHideText10()
-{
-if (document.getElementById("div_text10").className == "div_hide")
-{
-document.getElementById("div_text10").className = "div_show";
-document.getElementById("my_text10").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text10").className = "div_hide";
-document.getElementById("my_text10").innerText = "[+]";
-}
-}
-</script>
-
-
-<script language="javaScript">
-function showHideText11()
-{
-if (document.getElementById("div_text11").className == "div_hide")
-{
-document.getElementById("div_text11").className = "div_show";
-document.getElementById("my_text11").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text11").className = "div_hide";
-document.getElementById("my_text11").innerText = "[+]";
-}
-}
-</script>
-
-
-<script language="javaScript">
-function showHideText12()
-{
-if (document.getElementById("div_text12").className == "div_hide")
-{
-document.getElementById("div_text12").className = "div_show";
-document.getElementById("my_text12").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text12").className = "div_hide";
-document.getElementById("my_text12").innerText = "[+]";
-}
-}
-</script>
-
-
-<script language="javaScript">
-function showHideText13()
-{
-if (document.getElementById("div_text13").className == "div_hide")
-{
-document.getElementById("div_text13").className = "div_show";
-document.getElementById("my_text13").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text13").className = "div_hide";
-document.getElementById("my_text13").innerText = "[+]";
-}
-}
-</script>
-  
-<script language="javaScript">
-function showHideText14()
-{
-if (document.getElementById("div_text14").className == "div_hide")
-{
-document.getElementById("div_text14").className = "div_show";
-document.getElementById("my_text14").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text14").className = "div_hide";
-document.getElementById("my_text14").innerText = "[+]";
-}
-}
-</script>
-    
-      
-<script language="javaScript">
-function showHideText15()
-{
-if (document.getElementById("div_text15").className == "div_hide")
-{
-document.getElementById("div_text15").className = "div_show";
-document.getElementById("my_text15").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text15").className = "div_hide";
-document.getElementById("my_text15").innerText = "[+]";
-}
-}
-</script>
-	
-<script language="javaScript">
-function showHideText16()
-{
-if (document.getElementById("div_text16").className == "div_hide")
-{
-document.getElementById("div_text16").className = "div_show";
-document.getElementById("my_text16").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text16").className = "div_hide";
-document.getElementById("my_text16").innerText = "[+]";
-}
-}
-</script>
-	
-<script language="javaScript">
-function showHideText17()
-{
-if (document.getElementById("div_text17").className == "div_hide")
-{
-document.getElementById("div_text17").className = "div_show";
-document.getElementById("my_text17").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text17").className = "div_hide";
-document.getElementById("my_text17").innerText = "[+]";
-}
-}
-</script>
-	
-<script language="javaScript">
-function showHideText18()
-{
-if (document.getElementById("div_text18").className == "div_hide")
-{
-document.getElementById("div_text18").className = "div_show";
-document.getElementById("my_text18").innerText = "[-]";
-}
-else
-{
-
-document.getElementById("div_text18").className = "div_hide";
-document.getElementById("my_text18").innerText = "[+]";
-}
-}
-</script>
-	
-<script language="javaScript">
-function showHideText19() {
-  if (document.getElementById("div_text19").className == "div_hide") {
-    document.getElementById("div_text19").className = "div_show";
-    document.getElementById("my_text19").innerText = "[-]";
-  } else {
-    document.getElementById("div_text19").className = "div_hide";
-    document.getElementById("my_text19").innerText = "[+]";
-  }
-}
-</script>
-
-<!-- MathJax configuration -->
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      macros: {
-        Qtbar: '\\overline{\\mathbb{Q}(t)}'
+      #main {
+        padding: 20px;
       }
-    }
-  };
-</script>
 
-<!-- Load MathJax script once -->
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        type="text/javascript"></script>
+      @media (min-width: 600px) {
+        #main {
+          padding: 40px;
+        }
+      }
 
-<meta name="google-site-verification"
+      /* main margin from   */
+
+
+      /* Link styles */
+      a:link {
+        text-decoration: none;
+        color: blue;
+      }
+
+      a:active {
+        color: blue;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: blue;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: blue;
+      }
+
+      /* Intro section layout */
+      #intro-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+      }
+
+      /* until width  */
+      @media (min-width: 600px) {
+        #intro-container {
+          flex-direction: row;
+        }
+      }
+
+      #intro-container .column {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      #intro-container .photo img {
+        border-radius: 6px;
+      }
+
+      #intro-container .bio p {
+        flex: 1;
+        margin: 0;
+        text-align: justify;
+      }
+    </style>
+
+    <title>Olivier de Gaay Fortman's Homepage</title>
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <style>
+      p.a {
+        font-style: normal;
+      }
+
+      p.b {
+        font-style: italic;
+      }
+
+      p.c {
+        font-style: oblique;
+      }
+
+      body {
+        transform: scale(0.9);
+        /* Adjust as needed */
+        transform-origin: top left;
+        width: 111%;
+        /* Compensate for scaling */
+      }
+
+      li,
+      p {
+        line-height: 1.5;
+      }
+    </style>
+
+    <style>
+      .visi1 {
+        visibility: "visible"
+      }
+
+      .visi2 {
+        visibility: "hidden"
+      }
+
+      .disp1 {
+        display: "block"
+      }
+
+      .disp2 {
+        display: "none"
+      }
+
+      .div_show {
+        display: block;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        margin-right: 80px;
+        padding: 8px;
+        background: #EFF5E0;
+        border: solid 1px #c3c3c3;
+
+      }
+
+      .div_hide {
+        display: none;
+      }
+    </style>
+
+    <script language="javaScript">
+      function showHideText1() {
+        if (document.getElementById("div_text1").className == "div_hide") {
+          document.getElementById("div_text1").className = "div_show";
+          document.getElementById("my_text1").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text1").className = "div_hide";
+          document.getElementById("my_text1").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText2() {
+        if (document.getElementById("div_text2").className == "div_hide") {
+          document.getElementById("div_text2").className = "div_show";
+          document.getElementById("my_text2").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text2").className = "div_hide";
+          document.getElementById("my_text2").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText3() {
+        if (document.getElementById("div_text3").className == "div_hide") {
+          document.getElementById("div_text3").className = "div_show";
+          document.getElementById("my_text3").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text3").className = "div_hide";
+          document.getElementById("my_text3").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText4() {
+        if (document.getElementById("div_text4").className == "div_hide") {
+          document.getElementById("div_text4").className = "div_show";
+          document.getElementById("my_text4").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text4").className = "div_hide";
+          document.getElementById("my_text4").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText5() {
+        if (document.getElementById("div_text5").className == "div_hide") {
+          document.getElementById("div_text5").className = "div_show";
+          document.getElementById("my_text5").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text5").className = "div_hide";
+          document.getElementById("my_text5").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText6() {
+        if (document.getElementById("div_text6").className == "div_hide") {
+          document.getElementById("div_text6").className = "div_show";
+          document.getElementById("my_text6").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text6").className = "div_hide";
+          document.getElementById("my_text6").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText7() {
+        if (document.getElementById("div_text7").className == "div_hide") {
+          document.getElementById("div_text7").className = "div_show";
+          document.getElementById("my_text7").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text7").className = "div_hide";
+          document.getElementById("my_text7").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText8() {
+        if (document.getElementById("div_text8").className == "div_hide") {
+          document.getElementById("div_text8").className = "div_show";
+          document.getElementById("my_text8").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text8").className = "div_hide";
+          document.getElementById("my_text8").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText9() {
+        if (document.getElementById("div_text9").className == "div_hide") {
+          document.getElementById("div_text9").className = "div_show";
+          document.getElementById("my_text9").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text9").className = "div_hide";
+          document.getElementById("my_text9").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText10() {
+        if (document.getElementById("div_text10").className == "div_hide") {
+          document.getElementById("div_text10").className = "div_show";
+          document.getElementById("my_text10").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text10").className = "div_hide";
+          document.getElementById("my_text10").innerText = "[+]";
+        }
+      }
+    </script>
+
+
+    <script language="javaScript">
+      function showHideText11() {
+        if (document.getElementById("div_text11").className == "div_hide") {
+          document.getElementById("div_text11").className = "div_show";
+          document.getElementById("my_text11").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text11").className = "div_hide";
+          document.getElementById("my_text11").innerText = "[+]";
+        }
+      }
+    </script>
+
+
+    <script language="javaScript">
+      function showHideText12() {
+        if (document.getElementById("div_text12").className == "div_hide") {
+          document.getElementById("div_text12").className = "div_show";
+          document.getElementById("my_text12").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text12").className = "div_hide";
+          document.getElementById("my_text12").innerText = "[+]";
+        }
+      }
+    </script>
+
+
+    <script language="javaScript">
+      function showHideText13() {
+        if (document.getElementById("div_text13").className == "div_hide") {
+          document.getElementById("div_text13").className = "div_show";
+          document.getElementById("my_text13").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text13").className = "div_hide";
+          document.getElementById("my_text13").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText14() {
+        if (document.getElementById("div_text14").className == "div_hide") {
+          document.getElementById("div_text14").className = "div_show";
+          document.getElementById("my_text14").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text14").className = "div_hide";
+          document.getElementById("my_text14").innerText = "[+]";
+        }
+      }
+    </script>
+
+
+    <script language="javaScript">
+      function showHideText15() {
+        if (document.getElementById("div_text15").className == "div_hide") {
+          document.getElementById("div_text15").className = "div_show";
+          document.getElementById("my_text15").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text15").className = "div_hide";
+          document.getElementById("my_text15").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText16() {
+        if (document.getElementById("div_text16").className == "div_hide") {
+          document.getElementById("div_text16").className = "div_show";
+          document.getElementById("my_text16").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text16").className = "div_hide";
+          document.getElementById("my_text16").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText17() {
+        if (document.getElementById("div_text17").className == "div_hide") {
+          document.getElementById("div_text17").className = "div_show";
+          document.getElementById("my_text17").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text17").className = "div_hide";
+          document.getElementById("my_text17").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText18() {
+        if (document.getElementById("div_text18").className == "div_hide") {
+          document.getElementById("div_text18").className = "div_show";
+          document.getElementById("my_text18").innerText = "[-]";
+        }
+        else {
+
+          document.getElementById("div_text18").className = "div_hide";
+          document.getElementById("my_text18").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <script language="javaScript">
+      function showHideText19() {
+        if (document.getElementById("div_text19").className == "div_hide") {
+          document.getElementById("div_text19").className = "div_show";
+          document.getElementById("my_text19").innerText = "[-]";
+        } else {
+          document.getElementById("div_text19").className = "div_hide";
+          document.getElementById("my_text19").innerText = "[+]";
+        }
+      }
+    </script>
+
+    <!-- MathJax configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          macros: {
+            Qtbar: '\\overline{\\mathbb{Q}(t)}'
+          }
+        }
+      };
+    </script>
+
+    <!-- Load MathJax script once -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+      type="text/javascript"></script>
+
+    <meta name="google-site-verification"
       content="BD3rnysbI4fpvaPm4zfBx5pbX7e66sOb8vJq6rgugoM" />
 
-<style>
-  ol.research-papers li {
-    margin-bottom: 12px;
-    line-height: 1.5;
-  }
-</style>
+    <style>
+      ol.research-papers li {
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+    </style>
 
-</head>
-
-	
-<meta name="google-site-verification" content="BD3rnysbI4fpvaPm4zfBx5pbX7e66sOb8vJq6rgugoM" />
-
-<style>
-  ol.research-papers li {
-    margin-bottom: 12px;
-    line-height: 1.5;
-  }
-</style>
+  </head>
 
 
-<!-- Main body -->
+  <meta name="google-site-verification" content="BD3rnysbI4fpvaPm4zfBx5pbX7e66sOb8vJq6rgugoM" />
 
-<div id="main">
-
-<div id="top-banner">
-Personal Webpage
-</div>
-
-<div id="intro-container">
-  <div class="photo">
-    <img src="oliviernew.jpg" style="padding:20px;" width="230" />
-  </div>
-
-  <div class="bio">
-    <h1 class="name" style="font-size:20px; color:#000080; margin-top:12px; margin-bottom:1px;">
-      Olivier de Gaay Fortman
-    </h1>
-
-    <i>Postdoc in Algebraic Geometry</i><br><br>
-    Department of Mathematics<br>
-    Utrecht University<br>
-    Budapestlaan 6, 3584 CD<br>
-    Utrecht, The Netherlands<br>
-    Room number: 4.08<br><br>
-    <i>Email: a.o.d.degaayfortman((at))uu.nl</i><br><br>
-
-    <p style="margin: 0; text-align: justify;">
-      I am a postdoc in Algebraic Geometry at the University of Utrecht, mentored by Martijn Kool. <br>
-      Before, between 2022 and 2024, I was doing a postdoc at the Institute of Algebraic Geometry in Hannover,
-      mentored by Stefan Schreieder. <br>
-      Between 2019 and 2022, I did my PhD at the ENS in Paris, under the supervision of Olivier Benoist.
-    </p>
-  </div>
-</div>
-
-<br>
-	
-<h3> Research papers </h3>
-
-<ol class="research-papers" reversed>
-  <!-- list items here -->
-
-<li> <a href="https://arxiv.org/abs/2511.19410">
-Powers of abelian varieties over $\overline{\mathbb Q(t)}$ not isogenous to a Jacobian </a> (with Ananth N. Shankar)
-<br>arXiv preprint, 2025. Submitted. <a id="my_text17" href="javaScript:showHideText17()">[+]</a>
-<div id="div_text17" class="div_hide">
-<span style="font-size:0.99em"> 
-We prove the existence of abelian varieties over $\overline{\mathbb Q(t)}$ with no power isogenous to a Jacobian. 
-Moreover, given a positive integer $N$, we prove the existence of abelian varieties over $\overline{\mathbb Q(t)}$ 
-with maximal monodromy such that the $n$th power is not isogenous to a Jacobian for $n \leq N$. 
-We make use of an Arakelov inequality established by Lu and Zuo, as well as intersection theoretic methods, to prove our main results. 
-</span>
-</div>
-</li>
-
-<li> 
-<a href="matroidsandIHCforabelianvarieties.pdf">
-Matroids and the integral Hodge conjecture for abelian varieties</a> (with Philip Engel and Stefan Schreieder)
-<br>arXiv preprint, 2025. Submitted. <a id="my_text16" href="javaScript:showHideText16()">[+]</a>
-<div id="div_text16" class="div_hide">
-<span style="font-size:0.99em"> 
-We prove that the cohomology class of any curve on a very general principally polarized abelian 
-variety of dimension at least 4 is an even multiple of the minimal
-class. The same holds for the intermediate Jacobian of a very general cubic threefold.
-This disproves the integral Hodge conjecture for abelian varieties and shows that very
-general cubic threefolds are not stably rational. Our proof is motivated by tropical geometry; 
-it relies on multivariable Mumford constructions, monodromy considerations,
-and the combinatorial theory of matroids.
-</span> 
-</div>
-<a href="https://github.com/philip-engel/regular_matroids">
-Supporting code</a>
-</li>
-	
-<li> <a href="mumfordconstruction.pdf">
-Combinatorics and Hodge theory of degenerations of abelian varieties: A survey of the Mumford construction</a> (with Philip Engel and Stefan Schreieder)
-<br>arXiv preprint, 2025. Submitted. <a id="my_text15" href="javaScript:showHideText15()">[+]</a>
-<div id="div_text15" class="div_hide">
-<span style="font-size:0.99em"> 
-We survey the Mumford construction of degenerating abelian varieties, with a
-focus on the analytic version of the construction, and its relation to toric geometry. Moreover,
-we study the geometry and Hodge theory of multivariable degenerations of abelian varieties associated to regular matroids, 
-and extend some fundamental results of Clemens on 1-parameter
-semistable degenerations to the multivariable setting.
-</span>
-</div>
-</li>
-
-<li> <a href="https://arxiv.org/abs/2504.13642">
-Descent for algebraic stacks</a>
-<br>arXiv preprint, 2025. Submitted. <a id="my_text14" href="javaScript:showHideText14()">[+]</a>
-<div id="div_text14" class="div_hide">
-<span style="font-size:0.99em"> 
-We prove that algebraic stacks satisfy 2-descent for fppf coverings. 
-We generalize Galois descent for schemes to stacks, by considering the case where the fppf covering is a 
-	finite Galois covering and reformulating 2-descent data in terms of group actions on the stack. 
-</span>
-</div>
-</li>
-
-<li><a href="https://arxiv.org/abs/2504.02720">
-On the topology of real algebraic stacks</a> (with Emiliano Ambrosi)
-<br> arXiv preprint, 2025. Submitted.	
-<a id="my_text13" href="javaScript:showHideText13()">[+]</a>
-<div id="div_text13" class="div_hide">
-Motivated by questions arising in the theory of moduli spaces in real algebraic geometry, 
-we develop a range of methods to study the topology of the real locus of a Deligne-Mumford stack over the real numbers. 
-As an application, we verify in several cases the Smith-Thom type inequality for stacks that we conjectured in an earlier work. 
-This requires combining techniques from group theory, algebraic geometry, and topology.
-</span>
-</div>
-</li>
-
-<li><a href="https://arxiv.org/abs/2504.02760">
-Topological groupoids with involution and real algebraic stacks</a> (with Emiliano Ambrosi)
-<br> arXiv preprint, 2025. Submitted.
-<a id="my_text11" href="javaScript:showHideText11()">[+]</a>
-<div id="div_text11" class="div_hide">
-To a topological groupoid endowed with an involution, we associate a topological groupoid of fixed points, 
-generalizing the fixed-point subspace of a topological space with involution. 
-We prove that when the topological groupoid with involution arises from a Deligne-Mumford stack over the real numbers, 
-this fixed locus coincides with the real locus of the stack. 
-This provides a topological framework to study real algebraic stacks, and in particular real moduli spaces. 
-Finally, we propose a Smith-Thom type conjecture in this setting, generalizing the Smith-Thom inequality for topological 
-spaces endowed with an involution.
-</span>
-</div>
-</li>
-
-<li><a href="https://arxiv.org/pdf/2301.01598.pdf">
-Non-arithmetic hyperbolic orbifolds attached to unitary Shimura varieties</a>
-<br> arXiv preprint, 2024. Submitted.
-<a id="my_text5" href="javaScript:showHideText5()">[+]</a>
-<div id="div_text5" class="div_hide">
-<span style="font-size:0.99em">
-We develop a new method of constructing non-arithmetic lattices 
-in the projective orthogonal group PO(n,1) for every integer 
-n larger than one. The technique is to consider anti-holomorphic involutions 
-on a complex arithmetic ball quotient, glue their fixed loci along geodesic subspaces, 
-and show that the resulting metric space carries canonically the structure of a complete 
-real hyperbolic orbifold.
-</span>
-</div>
-</li>
-
-<li><a href="degaayfortmanschreieder-powers.pdf">
-Abelian varieties with no power isogenous to a Jacobian</a> (with Stefan Schreieder)
-<br> Journal ref.: <b>Compositio Mathematica</b>, 161 (2025), 1404-1457.
-<a id="my_text7" href="javaScript:showHideText7()">[+]</a>
-<div id="div_text7" class="div_hide">
-<span style="font-size:0.99em">
-For a curve of genus at least four which is either very general or very general hyperelliptic, 
-we classify all ways in which a power of its Jacobian can be isogenous to a product of Jacobians of curves. 
-As an application, we show that, for a very general principally polarized abelian variety of dimension at least four, 
-or the intermediate Jacobian of a very general cubic threefold, no power is isogenous to a product of Jacobians of curves. 
-This confirms some cases of the Coleman-Oort conjecture. We further deduce from our results some progress on the question 
-whether the integral Hodge conjecture fails for such abelian varieties.
-</span>
-</div>
-</li>
-	
-<li><a href="https://arxiv.org/pdf/2111.06381.pdf">
-Hyperbolic geometry and real moduli of five points on the line</a>
-<br> arXiv preprint, 2023. To appear in <b>Moduli</b>.
-<a id="my_text6" href="javaScript:showHideText6()">[+]</a>
-<div id="div_text6" class="div_hide">
-<span style="font-size:0.99em">
-We show that each connected component of the moduli space of smooth real binary quintics is isomorphic to an arithmetic quotient 
-of an open subset of the real hyperbolic plane. Moreover, our main result says that the induced metric 
-on this moduli space extends to a complete real hyperbolic orbifold structure on the space of stable 
-real binary quintics. This turns the moduli space of stable real binary quintics into a real 
-two-dimensional ball quotient, whose fundamental domain is given by the hyperbolic triangle 
-of angles π/3,π/5 and π/10, and whose fundamental group is non-arithmetic.
-</span>
-</div>
-</li>
-
-<li><a href="degaayfortman-crelle.pdf">
-On the integral Hodge conjecture for real abelian threefolds</a>
-<br>
-Journal ref.: <b>Crelle</b>, vol. 2024, no. 807, pp. 221-255 (2024). <a id="my_text4" href="javaScript:showHideText4()">[+]</a>
-<div id="div_text4" class="div_hide">
-<span style="font-size:0.99em">
-We prove the real integral Hodge conjecture for several classes 
-of real abelian threefolds. For instance, we prove the property 
-for real abelian threefolds A whose real locus A(ℝ) is connected, 
-and for real abelian threefolds A which are a product A=B×E of an 
-abelian surface B and an elliptic curve E with connected real locus E(ℝ). 
-Moreover, we show that every real abelian threefold satisfies the 
-real integral Hodge conjecture modulo torsion, and reduce the general 
-case to the Jacobian case. 
-</span>
-</div>
-</li>
-
-<li><a href="degaaybeckman-integralfourierAVs.pdf">
-	Integral Fourier transforms and the integral Hodge conjecture for one-cycles on abelian varieties</a> (with Thorsten Beckmann)
-<br> Journal ref.: <b>Compositio Mathematica</b> 159(6)6: 1188-1213, 2023.
-<a id="my_text3" href="javaScript:showHideText3()">[+]</a>
-<div id="div_text3" class="div_hide">
-<span style="font-size:0.99em">
-We prove the integral Hodge conjecture for one-cycles 
-	on a principally polarized complex abelian variety whose 
-	minimal class is algebraic. In particular, the Jacobian of a 
-	smooth projective curve over the complex numbers satisfies the 
-	integral Hodge conjecture for one-cycles. The main ingredient is a 
-	lift of the Fourier transform to integral Chow groups. Similarly, 
-	we prove the integral Tate conjecture for one-cycles on the Jacobian of a 
-	smooth projective curve over the separable closure of a finitely generated field. 
-	Furthermore, abelian varieties satisfying such a conjecture are dense in their moduli space.
-</span>
-</div>
-</li>
-
-<li> <a href="degaayfortman_abeliandensity.pdf">
-Real moduli spaces and density of non-simple real abelian varieties</a>
-<br> Journal ref.: <b>The Quarterly Journal of Mathematics</b>, 73 no. 3:  969-989, 2022.
-  <a id="my_text2" href="javaScript:showHideText2()">[+]</a>
-<div id="div_text2" class="div_hide">
-<span style="font-size:0.99em"> 
-	For fixed k < g and a family of polarized abelian varieties of dimension g over ℝ⁠, we give a criterion for the density in the parameter space of those abelian varieties over ℝ containing a k-dimensional abelian subvariety over ℝ⁠. As application, we prove density of such a set in the moduli space of polarized real abelian varieties of dimension g and density of real algebraic curves mapping non-trivially to real k-dimensional abelian varieties in the moduli space of real algebraic curves as well as in the space of real plane curves. This extends to the real setting results by Colombo and Pirola [10]. We then consider the real locus of an algebraic stack over ℝ⁠, attaching a topological space to it. For a real moduli stack, this defines a real moduli space. We show that for Mg and Ag⁠, the real moduli spaces that arise in this way coincide with the moduli spaces of Gross–Harris and Seppälä–Silhol.
-</span>
-</div>
-</li>
-</ol>
+  <style>
+    ol.research-papers li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+  </style>
 
 
-<h3>PhD thesis</h3>
-<ul>
-  <li>
-    <a href="https://arxiv.org/pdf/2211.02710.pdf">
-      Moduli spaces and algebraic cycles in real algebraic geometry
-    </a>
-    <br>
-    ENS Paris, 2022
-    <a id="my_text1" href="javascript:showHideText1()">[+]</a>
-    
-    <div id="div_text1" class="div_hide" style="margin-top: 5px;">
-      <span style="font-size: 0.99em;">
-        This thesis intends to make a contribution to the theories of algebraic cycles and moduli spaces over the real numbers. 
-        In the study of the subvarieties of a projective algebraic variety, smooth over the field of real numbers, the cycle class map between 
-        the Chow ring and the equivariant cohomology ring plays an important role. The image of the cycle class map remains difficult to describe 
-        in general; we study this group in detail in the case of real abelian varieties. To do so, we construct integral Fourier transforms on Chow rings
-        of abelian varieties over any field. They allow us to prove the integral Hodge conjecture for one-cycles on complex Jacobian varieties, and the 
-        real integral Hodge conjecture modulo torsion for real abelian threefolds. 
-        <br><br>
-        For the theory of real algebraic cycles, and for several other purposes in real algebraic geometry, it is useful to have moduli spaces of real varieties
-        to our disposal. Insight in the topology of a real moduli space provides insight in the geometry of a real variety that defines a point in it, 
-        and the other way around. In the moduli space of real abelian varieties, as well as in the Torelli locus contained in it, we prove density of 
-        the set of moduli points attached to abelian varieties containing an abelian subvariety of fixed dimension. Moreover, we provide the moduli space
-        of stable real binary quintics with a hyperbolic orbifold structure, compatible with the period map on the locus of smooth quintics. This identifies
-        the moduli space of stable real binary quintics with a non-arithmetic ball quotient.
-      </span>
+  <!-- Main body -->
+  <div id="main">
+    <div id="intro-container">
+      <div class="photo">
+        <img src="oliviernew.jpg" width="230" />
+      </div>
+
+      <div class="bio">
+        <h1 class="name" style="font-size:20px; color:#000080; margin-top:0px; margin-bottom:10px;">
+          Olivier de Gaay Fortman
+        </h1>
+
+        <p style="margin-bottom: 15px;"><b>Postdoc in Algebraic Geometry</b></p>
+
+        <p style="margin-bottom: 15px;">
+          Department of Mathematics<br>
+          Utrecht University<br>
+          Budapestlaan 6, 3584 CD<br>
+          Utrecht, The Netherlands<br>
+          Room number: 4.08<br>
+        </p>
+        <p style="margin-bottom: 15px;">
+          <i>Email: a.o.d.degaayfortman((at))uu.nl</i>
+        </p>
+
+        <p style="margin: 0;">
+          I am a postdoc in Algebraic Geometry at the University of Utrecht, mentored by Martijn Kool.
+          Before, between 2022 and 2024, I was doing a postdoc at the Institute of Algebraic Geometry in Hannover,
+          mentored by Stefan Schreieder.
+          Between 2019 and 2022, I did my PhD at the ENS in Paris, under the supervision of Olivier Benoist.
+        </p>
+      </div>
     </div>
-  </li>
-</ul>
 
-	<h3> Conference organization: JAVA </h3>
+    <br>
 
-<ul>
-			<li>
-			JAVA 2026 conference: The Hodge conjecture for abelian fourfolds<br>
-			Organization joint with Emiliano Ambrosi, Giuseppe Ancona, Mattia Cavicchi, 
-			Dragoș Frățilă and Marco Maculan.
-			</li>	
+    <h3> Research papers </h3>
 
-</ul>
-<ul>
-	
-			<li>
-			JAVA 2025 conference: <a href = "https://webusers.imj-prg.fr/~marco.maculan/java/?y=2025&p=home">
-			Unlikely Intersections, O-minimal Geometry, and Torsion Points on a Family of Abelian Varieties.</a> <br>
-			Organization joint with Emiliano Ambrosi, Giuseppe Ancona, Mattia Cavicchi, 
-			Dragoș Frățilă and Marco Maculan.
-			</li>	
-</ul>
+    <ol class="research-papers" reversed>
+      <!-- list items here -->
+
+      <li> <a href="https://arxiv.org/abs/2511.19410">
+          Powers of abelian varieties over $\overline{\mathbb Q(t)}$ not isogenous to a Jacobian </a> (with Ananth N.
+        Shankar)
+        <br>arXiv preprint, 2025. Submitted. <a id="my_text17" href="javaScript:showHideText17()">[+]</a>
+        <div id="div_text17" class="div_hide">
+          <span style="font-size:0.99em">
+            We prove the existence of abelian varieties over $\overline{\mathbb Q(t)}$ with no power isogenous to a
+            Jacobian.
+            Moreover, given a positive integer $N$, we prove the existence of abelian varieties over $\overline{\mathbb
+            Q(t)}$
+            with maximal monodromy such that the $n$th power is not isogenous to a Jacobian for $n \leq N$.
+            We make use of an Arakelov inequality established by Lu and Zuo, as well as intersection theoretic methods,
+            to prove our main results.
+          </span>
+        </div>
+      </li>
+
+      <li>
+        <a href="matroidsandIHCforabelianvarieties.pdf">
+          Matroids and the integral Hodge conjecture for abelian varieties</a> (with Philip Engel and Stefan Schreieder)
+        <br>arXiv preprint, 2025. Submitted. <a id="my_text16" href="javaScript:showHideText16()">[+]</a>
+        <div id="div_text16" class="div_hide">
+          <span style="font-size:0.99em">
+            We prove that the cohomology class of any curve on a very general principally polarized abelian
+            variety of dimension at least 4 is an even multiple of the minimal
+            class. The same holds for the intermediate Jacobian of a very general cubic threefold.
+            This disproves the integral Hodge conjecture for abelian varieties and shows that very
+            general cubic threefolds are not stably rational. Our proof is motivated by tropical geometry;
+            it relies on multivariable Mumford constructions, monodromy considerations,
+            and the combinatorial theory of matroids.
+          </span>
+        </div>
+        <a href="https://github.com/philip-engel/regular_matroids">
+          Supporting code</a>
+      </li>
+
+      <li> <a href="mumfordconstruction.pdf">
+          Combinatorics and Hodge theory of degenerations of abelian varieties: A survey of the Mumford construction</a>
+        (with Philip Engel and Stefan Schreieder)
+        <br>arXiv preprint, 2025. Submitted. <a id="my_text15" href="javaScript:showHideText15()">[+]</a>
+        <div id="div_text15" class="div_hide">
+          <span style="font-size:0.99em">
+            We survey the Mumford construction of degenerating abelian varieties, with a
+            focus on the analytic version of the construction, and its relation to toric geometry. Moreover,
+            we study the geometry and Hodge theory of multivariable degenerations of abelian varieties associated to
+            regular matroids,
+            and extend some fundamental results of Clemens on 1-parameter
+            semistable degenerations to the multivariable setting.
+          </span>
+        </div>
+      </li>
+
+      <li> <a href="https://arxiv.org/abs/2504.13642">
+          Descent for algebraic stacks</a>
+        <br>arXiv preprint, 2025. Submitted. <a id="my_text14" href="javaScript:showHideText14()">[+]</a>
+        <div id="div_text14" class="div_hide">
+          <span style="font-size:0.99em">
+            We prove that algebraic stacks satisfy 2-descent for fppf coverings.
+            We generalize Galois descent for schemes to stacks, by considering the case where the fppf covering is a
+            finite Galois covering and reformulating 2-descent data in terms of group actions on the stack.
+          </span>
+        </div>
+      </li>
+
+      <li><a href="https://arxiv.org/abs/2504.02720">
+          On the topology of real algebraic stacks</a> (with Emiliano Ambrosi)
+        <br> arXiv preprint, 2025. Submitted.
+        <a id="my_text13" href="javaScript:showHideText13()">[+]</a>
+        <div id="div_text13" class="div_hide">
+          Motivated by questions arising in the theory of moduli spaces in real algebraic geometry,
+          we develop a range of methods to study the topology of the real locus of a Deligne-Mumford stack over the real
+          numbers.
+          As an application, we verify in several cases the Smith-Thom type inequality for stacks that we conjectured in
+          an earlier work.
+          This requires combining techniques from group theory, algebraic geometry, and topology.
+          </span>
+        </div>
+      </li>
+
+      <li><a href="https://arxiv.org/abs/2504.02760">
+          Topological groupoids with involution and real algebraic stacks</a> (with Emiliano Ambrosi)
+        <br> arXiv preprint, 2025. Submitted.
+        <a id="my_text11" href="javaScript:showHideText11()">[+]</a>
+        <div id="div_text11" class="div_hide">
+          To a topological groupoid endowed with an involution, we associate a topological groupoid of fixed points,
+          generalizing the fixed-point subspace of a topological space with involution.
+          We prove that when the topological groupoid with involution arises from a Deligne-Mumford stack over the real
+          numbers,
+          this fixed locus coincides with the real locus of the stack.
+          This provides a topological framework to study real algebraic stacks, and in particular real moduli spaces.
+          Finally, we propose a Smith-Thom type conjecture in this setting, generalizing the Smith-Thom inequality for
+          topological
+          spaces endowed with an involution.
+          </span>
+        </div>
+      </li>
+
+      <li><a href="https://arxiv.org/pdf/2301.01598.pdf">
+          Non-arithmetic hyperbolic orbifolds attached to unitary Shimura varieties</a>
+        <br> arXiv preprint, 2024. Submitted.
+        <a id="my_text5" href="javaScript:showHideText5()">[+]</a>
+        <div id="div_text5" class="div_hide">
+          <span style="font-size:0.99em">
+            We develop a new method of constructing non-arithmetic lattices
+            in the projective orthogonal group PO(n,1) for every integer
+            n larger than one. The technique is to consider anti-holomorphic involutions
+            on a complex arithmetic ball quotient, glue their fixed loci along geodesic subspaces,
+            and show that the resulting metric space carries canonically the structure of a complete
+            real hyperbolic orbifold.
+          </span>
+        </div>
+      </li>
+
+      <li><a href="degaayfortmanschreieder-powers.pdf">
+          Abelian varieties with no power isogenous to a Jacobian</a> (with Stefan Schreieder)
+        <br> Journal ref.: <b>Compositio Mathematica</b>, 161 (2025), 1404-1457.
+        <a id="my_text7" href="javaScript:showHideText7()">[+]</a>
+        <div id="div_text7" class="div_hide">
+          <span style="font-size:0.99em">
+            For a curve of genus at least four which is either very general or very general hyperelliptic,
+            we classify all ways in which a power of its Jacobian can be isogenous to a product of Jacobians of curves.
+            As an application, we show that, for a very general principally polarized abelian variety of dimension at
+            least four,
+            or the intermediate Jacobian of a very general cubic threefold, no power is isogenous to a product of
+            Jacobians of curves.
+            This confirms some cases of the Coleman-Oort conjecture. We further deduce from our results some progress on
+            the question
+            whether the integral Hodge conjecture fails for such abelian varieties.
+          </span>
+        </div>
+      </li>
+
+      <li><a href="https://arxiv.org/pdf/2111.06381.pdf">
+          Hyperbolic geometry and real moduli of five points on the line</a>
+        <br> arXiv preprint, 2023. To appear in <b>Moduli</b>.
+        <a id="my_text6" href="javaScript:showHideText6()">[+]</a>
+        <div id="div_text6" class="div_hide">
+          <span style="font-size:0.99em">
+            We show that each connected component of the moduli space of smooth real binary quintics is isomorphic to an
+            arithmetic quotient
+            of an open subset of the real hyperbolic plane. Moreover, our main result says that the induced metric
+            on this moduli space extends to a complete real hyperbolic orbifold structure on the space of stable
+            real binary quintics. This turns the moduli space of stable real binary quintics into a real
+            two-dimensional ball quotient, whose fundamental domain is given by the hyperbolic triangle
+            of angles π/3,π/5 and π/10, and whose fundamental group is non-arithmetic.
+          </span>
+        </div>
+      </li>
+
+      <li><a href="degaayfortman-crelle.pdf">
+          On the integral Hodge conjecture for real abelian threefolds</a>
+        <br>
+        Journal ref.: <b>Crelle</b>, vol. 2024, no. 807, pp. 221-255 (2024). <a id="my_text4"
+          href="javaScript:showHideText4()">[+]</a>
+        <div id="div_text4" class="div_hide">
+          <span style="font-size:0.99em">
+            We prove the real integral Hodge conjecture for several classes
+            of real abelian threefolds. For instance, we prove the property
+            for real abelian threefolds A whose real locus A(ℝ) is connected,
+            and for real abelian threefolds A which are a product A=B×E of an
+            abelian surface B and an elliptic curve E with connected real locus E(ℝ).
+            Moreover, we show that every real abelian threefold satisfies the
+            real integral Hodge conjecture modulo torsion, and reduce the general
+            case to the Jacobian case.
+          </span>
+        </div>
+      </li>
+
+      <li><a href="degaaybeckman-integralfourierAVs.pdf">
+          Integral Fourier transforms and the integral Hodge conjecture for one-cycles on abelian varieties</a> (with
+        Thorsten Beckmann)
+        <br> Journal ref.: <b>Compositio Mathematica</b> 159(6)6: 1188-1213, 2023.
+        <a id="my_text3" href="javaScript:showHideText3()">[+]</a>
+        <div id="div_text3" class="div_hide">
+          <span style="font-size:0.99em">
+            We prove the integral Hodge conjecture for one-cycles
+            on a principally polarized complex abelian variety whose
+            minimal class is algebraic. In particular, the Jacobian of a
+            smooth projective curve over the complex numbers satisfies the
+            integral Hodge conjecture for one-cycles. The main ingredient is a
+            lift of the Fourier transform to integral Chow groups. Similarly,
+            we prove the integral Tate conjecture for one-cycles on the Jacobian of a
+            smooth projective curve over the separable closure of a finitely generated field.
+            Furthermore, abelian varieties satisfying such a conjecture are dense in their moduli space.
+          </span>
+        </div>
+      </li>
+
+      <li> <a href="degaayfortman_abeliandensity.pdf">
+          Real moduli spaces and density of non-simple real abelian varieties</a>
+        <br> Journal ref.: <b>The Quarterly Journal of Mathematics</b>, 73 no. 3: 969-989, 2022.
+        <a id="my_text2" href="javaScript:showHideText2()">[+]</a>
+        <div id="div_text2" class="div_hide">
+          <span style="font-size:0.99em">
+            For fixed k < g and a family of polarized abelian varieties of dimension g over ℝ⁠, we give a criterion for
+              the density in the parameter space of those abelian varieties over ℝ containing a k-dimensional abelian
+              subvariety over ℝ⁠. As application, we prove density of such a set in the moduli space of polarized real
+              abelian varieties of dimension g and density of real algebraic curves mapping non-trivially to real
+              k-dimensional abelian varieties in the moduli space of real algebraic curves as well as in the space of
+              real plane curves. This extends to the real setting results by Colombo and Pirola [10]. We then consider
+              the real locus of an algebraic stack over ℝ⁠, attaching a topological space to it. For a real moduli
+              stack, this defines a real moduli space. We show that for Mg and Ag⁠, the real moduli spaces that arise in
+              this way coincide with the moduli spaces of Gross–Harris and Seppälä–Silhol.
+              </span>
+        </div>
+      </li>
+    </ol>
 
 
- <h3> Seminar organization </h3>
+    <h3>PhD thesis</h3>
+    <ul>
+      <li>
+        <a href="https://arxiv.org/pdf/2211.02710.pdf">
+          Moduli spaces and algebraic cycles in real algebraic geometry
+        </a>
+        <br>
+        ENS Paris, 2022
+        <a id="my_text1" href="javascript:showHideText1()">[+]</a>
 
-	<ul>
-	</ul>
-	<ul>
-	</ul>
+        <div id="div_text1" class="div_hide" style="margin-top: 5px;">
+          <span style="font-size: 0.99em;">
+            This thesis intends to make a contribution to the theories of algebraic cycles and moduli spaces over the
+            real numbers.
+            In the study of the subvarieties of a projective algebraic variety, smooth over the field of real numbers,
+            the cycle class map between
+            the Chow ring and the equivariant cohomology ring plays an important role. The image of the cycle class map
+            remains difficult to describe
+            in general; we study this group in detail in the case of real abelian varieties. To do so, we construct
+            integral Fourier transforms on Chow rings
+            of abelian varieties over any field. They allow us to prove the integral Hodge conjecture for one-cycles on
+            complex Jacobian varieties, and the
+            real integral Hodge conjecture modulo torsion for real abelian threefolds.
+            <br><br>
+            For the theory of real algebraic cycles, and for several other purposes in real algebraic geometry, it is
+            useful to have moduli spaces of real varieties
+            to our disposal. Insight in the topology of a real moduli space provides insight in the geometry of a real
+            variety that defines a point in it,
+            and the other way around. In the moduli space of real abelian varieties, as well as in the Torelli locus
+            contained in it, we prove density of
+            the set of moduli points attached to abelian varieties containing an abelian subvariety of fixed dimension.
+            Moreover, we provide the moduli space
+            of stable real binary quintics with a hyperbolic orbifold structure, compatible with the period map on the
+            locus of smooth quintics. This identifies
+            the moduli space of stable real binary quintics with a non-arithmetic ball quotient.
+          </span>
+        </div>
+      </li>
+    </ul>
 
-	<ul>
-		<li>
-	
-		2024/2025: <i>Intercity Geometry Seminar</i> in the Netherlands: 
-		<a href = "https://webspace.science.uu.nl/~dobbe012/resolution">
-			Intercity Geometry Seminar on Resolution of Singularities. </a> <br>
-		Organization joint with Remy van Dobben de Bruyn and Simon Pepin Lehalleur.
-		</li>
-	
-</ul>
+    <h3> Conference organization: JAVA </h3>
+
+    <ul>
+      <li>
+        JAVA 2026 conference: The Hodge conjecture for abelian fourfolds<br>
+        Organization joint with Emiliano Ambrosi, Giuseppe Ancona, Mattia Cavicchi,
+        Dragoș Frățilă and Marco Maculan.
+      </li>
+
+    </ul>
+    <ul>
+
+      <li>
+        JAVA 2025 conference: <a href="https://webusers.imj-prg.fr/~marco.maculan/java/?y=2025&p=home">
+          Unlikely Intersections, O-minimal Geometry, and Torsion Points on a Family of Abelian Varieties.</a> <br>
+        Organization joint with Emiliano Ambrosi, Giuseppe Ancona, Mattia Cavicchi,
+        Dragoș Frățilă and Marco Maculan.
+      </li>
+    </ul>
+
+
+    <h3> Seminar organization </h3>
+
+    <ul>
+    </ul>
+    <ul>
+    </ul>
+
+    <ul>
+      <li>
+
+        2024/2025: <i>Intercity Geometry Seminar</i> in the Netherlands:
+        <a href="https://webspace.science.uu.nl/~dobbe012/resolution">
+          Intercity Geometry Seminar on Resolution of Singularities. </a> <br>
+        Organization joint with Remy van Dobben de Bruyn and Simon Pepin Lehalleur.
+      </li>
+
+    </ul>
 
 
 
-<!--
+    <!--
 	
 	<h3> Selected learning seminar talk notes </h3>
 
@@ -829,106 +836,117 @@ Deformations of singularities</a>
 
 -->
 
- <h3> Selected Conference Talks</h3>
+    <h3> Selected Conference Talks</h3>
 
 
-	
 
-	Upcoming: 
 
-	<ul>
+    Upcoming:
 
-			<li>
-	
-			<a href = "https://sites.google.com/view/abvarmod/homepage">
-			Abelian varieties and their moduli</a>, Barcelona (Spain), February 2026 <br> Organizers: G. Farkas, M. Lahoz, J.C. Naranjo, A. Rojas </li>
-		
-		</li>
+    <ul>
 
-		</ul>
-		
-	Past:
+      <li>
 
-	<ul>
-	
-		<li>
-	
-			<a href = "https://conferences.cirm-math.fr/3168.html">
-			Real algebraic geometry and Birational geometry</a>, Marseille (France), June 2025 <br> Organizers: M. Ancona, N. Bouchareb, I. Cheltsov, I. Itenberg, F. Mangolte, G. Rond </li>
-		
-		</li>
-		<li>
-			<a href = "https://people.math.ethz.ch/~rahul/AbelianDays.html">
-			Curves, abelian varieties, and their moduli</a>, Berlin (Germany), May 2024 <br> Organizers: G. Farkas , R. Pandharipande
-		</li>
-		<li>
-	
-		<a href = "http://emiliano.ambrosi.perso.math.cnrs.fr/CAVARETpage/Cavaretmain.html">
-			Curves, Abelian Varieties and Related Topics (CAVARET)</a>, Barcelona (Spain), June 2024 <br> Organizers: E. Ambrosi, G. Ancona, F. Fité, X. Guitart </li>
-		<li>
-Research School in Real Algebraic Geometry, Trieste (Italy), November 2023 </li>
-	<li>
-Birational Geometry and Regulous Functions, Le Croisic, France	
-	 </li>
+        <a href="https://sites.google.com/view/abvarmod/homepage">
+          Abelian varieties and their moduli</a>, Barcelona (Spain), February 2026 <br> Organizers: G. Farkas, M. Lahoz,
+        J.C. Naranjo, A. Rojas
+      </li>
 
-	<li>
-		Cycles et Périodes, Strasbourg, France
-	</li>
+      </li>
 
-	<li>
-		Journées de Géométrie Algébrique Réelle, Angers, France
-	</li>
+    </ul>
 
-	<li>
-		Workshop on Complex Geometry and Geometric Group Theory, Karlsruhe, Germany
-	</li>
-	
-</ul>
-								       
-<h3> Teaching </h3>
+    Past:
 
-	<ul>
-	<li>
-	Supervision of a master student (2025/2026)
-	</li>		
-	<li>
-		
-		<i>Algebraic Geometry II</i>  (May 2024 - July 2024). Lecturer <br>
-		Here are the <a href="AGII-part2-degaayfortman.pdf">course notes - Algebraic Geometry II</a>. <br>
-		Course taught at the Leibniz University Hannover
-	</li>			
-	<li>
-		<i>The geometry and arithmetic of cubic hypersurfaces</i> (October 2023 - February 2024). Lecturer <br>
-		Here are the <a href="geometry-and-arithmetic-of-cubics.pdf"> course notes - Cubic Hypersurfaces
-		</a> <br>
-		Course taught at the Leibniz University Hannover <br>
-		For the exam, see: 
-		<a href="EXAM-CUBICS.pdf">
-		EXAM: The geometry and arithmetic of cubic hypersurfaces</a> (March 2024)
+    <ul>
 
-	</li>
-	<li>
-		<i>Complex Analysis</i>, École Normale Supérieure de Paris, Assistant teacher, Fall 2022 <br>
-		Notes: <a href="TDanalysecomplexe2022.pdf">
-		Exercices in Complex Analysis</a> (September 2022)
-	</li>
-	<li>
-<i>Elliptic Curves</i> (Teacher, 2020), Leading a student working seminar, M1, ENS Paris, Autumn/Winter 2020 
-	</li>
-	<li>
-<i>Galois Theory</i> (Assistant teacher, 2019)</li>
-	<li>
-<i>Geometry</i> (Assistant teacher, 2018)</li>
-	<li>
-<i>Analysis</i> (Assistant teacher, 2018)</li>
-	<li>
-<i>Differential Equations</i> (Assistant teacher, 2017)</li>
-	<li>
-<i>Calculus</i> (Assistant teacher, 2016-2018)
-		</li>
-</ul>
-<!-- 100% privacy-first analytics -->
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-</div>
+      <li>
+
+        <a href="https://conferences.cirm-math.fr/3168.html">
+          Real algebraic geometry and Birational geometry</a>, Marseille (France), June 2025 <br> Organizers: M. Ancona,
+        N. Bouchareb, I. Cheltsov, I. Itenberg, F. Mangolte, G. Rond
+      </li>
+
+      </li>
+      <li>
+        <a href="https://people.math.ethz.ch/~rahul/AbelianDays.html">
+          Curves, abelian varieties, and their moduli</a>, Berlin (Germany), May 2024 <br> Organizers: G. Farkas , R.
+        Pandharipande
+      </li>
+      <li>
+
+        <a href="http://emiliano.ambrosi.perso.math.cnrs.fr/CAVARETpage/Cavaretmain.html">
+          Curves, Abelian Varieties and Related Topics (CAVARET)</a>, Barcelona (Spain), June 2024 <br> Organizers: E.
+        Ambrosi, G. Ancona, F. Fité, X. Guitart
+      </li>
+      <li>
+        Research School in Real Algebraic Geometry, Trieste (Italy), November 2023 </li>
+      <li>
+        Birational Geometry and Regulous Functions, Le Croisic, France
+      </li>
+
+      <li>
+        Cycles et Périodes, Strasbourg, France
+      </li>
+
+      <li>
+        Journées de Géométrie Algébrique Réelle, Angers, France
+      </li>
+
+      <li>
+        Workshop on Complex Geometry and Geometric Group Theory, Karlsruhe, Germany
+      </li>
+
+    </ul>
+
+    <h3> Teaching </h3>
+
+    <ul>
+      <li>
+        Supervision of a master student (2025/2026)
+      </li>
+      <li>
+
+        <i>Algebraic Geometry II</i> (May 2024 - July 2024). Lecturer <br>
+        Here are the <a href="AGII-part2-degaayfortman.pdf">course notes - Algebraic Geometry II</a>. <br>
+        Course taught at the Leibniz University Hannover
+      </li>
+      <li>
+        <i>The geometry and arithmetic of cubic hypersurfaces</i> (October 2023 - February 2024). Lecturer <br>
+        Here are the <a href="geometry-and-arithmetic-of-cubics.pdf"> course notes - Cubic Hypersurfaces
+        </a> <br>
+        Course taught at the Leibniz University Hannover <br>
+        For the exam, see:
+        <a href="EXAM-CUBICS.pdf">
+          EXAM: The geometry and arithmetic of cubic hypersurfaces</a> (March 2024)
+
+      </li>
+      <li>
+        <i>Complex Analysis</i>, École Normale Supérieure de Paris, Assistant teacher, Fall 2022 <br>
+        Notes: <a href="TDanalysecomplexe2022.pdf">
+          Exercices in Complex Analysis</a> (September 2022)
+      </li>
+      <li>
+        <i>Elliptic Curves</i> (Teacher, 2020), Leading a student working seminar, M1, ENS Paris, Autumn/Winter 2020
+      </li>
+      <li>
+        <i>Galois Theory</i> (Assistant teacher, 2019)
+      </li>
+      <li>
+        <i>Geometry</i> (Assistant teacher, 2018)
+      </li>
+      <li>
+        <i>Analysis</i> (Assistant teacher, 2018)
+      </li>
+      <li>
+        <i>Differential Equations</i> (Assistant teacher, 2017)
+      </li>
+      <li>
+        <i>Calculus</i> (Assistant teacher, 2016-2018)
+      </li>
+    </ul>
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  </div>
 
 </html>
