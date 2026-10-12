@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prismatic Cohomology Study Group</title>
   <style>
+    * { box-sizing: border-box; }
     body {
       max-width: 850px;
       margin: 40px auto;
@@ -13,36 +14,505 @@
       line-height: 1.6;
       color: #222;
     }
-    h1, h2 { color: #000080; }
-    a { color: blue; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    h1, h2, h3 { color: #000080; }
+    h1 { line-height: 1.25; }
+    h2 { margin-top: 2em; }
+    h3 { margin-top: 1.8em; }
+    h4 { font-size: 1.05em; margin: 1.6em 0 0.6em; }
+    a { color: blue; text-decoration: none; overflow-wrap: anywhere; }
+    a:hover, a:focus-visible { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #000080; outline-offset: 3px; }
+    li { margin-bottom: 0.4em; }
+    nav { margin: 1.5em 0; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 0.4em 1.3em; padding: 0; list-style: none; }
+    .table-scroll { overflow-x: auto; margin: 1em 0; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    caption { text-align: left; font-weight: bold; margin-bottom: 0.5em; }
+    th, td { padding: 0.6em 0.7em; vertical-align: top; border-bottom: 1px solid #ccc; }
+    thead th { border-top: 1px solid #222; border-bottom: 1px solid #222; }
+    .schedule { min-width: 580px; }
+    .schedule td:nth-child(2) { white-space: nowrap; }
+    .cohomology-table { min-width: 580px; }
+    .cohomology-table th:first-child { width: 28%; }
+    .math-display { overflow-x: auto; overflow-y: hidden; padding: 0.3em 0; }
+    .talk-date { color: #555; margin-top: 0; }
+    .reference-list { padding-left: 0; list-style: none; }
+    .reference-list li { margin-bottom: 1em; }
+    section, article, .reference-list li { scroll-margin-top: 1.5em; }
+    footer { border-top: 1px solid #ccc; margin-top: 3em; padding-top: 1em; color: #555; }
+    @media (max-width: 600px) {
+      body { margin: 24px auto; padding: 0 16px; }
+      h1 { font-size: 1.8em; }
+      th, td { padding: 0.5em; }
+    }
+    @media print {
+      body { max-width: none; margin: 0; padding: 0; color: #000; }
+      nav { display: none; }
+      a { color: #000080; }
+      .table-scroll, .math-display { overflow: visible; }
+      table { min-width: 0 !important; }
+      h2, h3, h4 { break-after: avoid; }
+      tr { break-inside: avoid; }
+    }
   </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <p><a href="./">Olivier de Gaay Fortman's homepage</a></p>
+  <header>
+    <p><a href="./">Olivier de Gaay Fortman's homepage</a></p>
+    <h1>Prismatic Cohomology Study Group</h1>
+    <p>A learning seminar at Imperial College London.</p>
+    <p>Organised by <a href="https://olivierfortman.github.io">Olivier de Gaay Fortman</a>.</p>
+    <p><a href="prismaticprogram.pdf">Download the full seminar programme (PDF)</a></p>
+  </header>
 
-  <h1>Prismatic Cohomology Study Group</h1>
-  <p>A learning seminar at Imperial College London.</p>
+  <nav aria-label="On this page">
+    <ul>
+      <li><a href="#practical-information">Practical information</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#comparisons">Comparison theorems</a></li>
+      <li><a href="#schedule">Programme and dates</a></li>
+      <li><a href="#talks">Talk outlines</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
 
-  <h2>Practical information</h2>
-  <ul>
-    <li><strong>Dates, time and room:</strong> To be announced.</li>
-    <li><strong>Organiser:</strong> Olivier de Gaay Fortman.</li>
-  </ul>
+  <main>
+    <section id="practical-information">
+      <h2>Practical information</h2>
+      <ul>
+        <li><strong>Dates:</strong> Nine morning meetings, from 22 October to 18 December 2026.</li>
+        <li><strong>Time:</strong> 10:00–12:00.</li>
+        <li><strong>Days:</strong> Fridays, except for Thursday 22 October and Thursday 3 December.</li>
+        <li><strong>Venue:</strong> Imperial College London. Room: to be announced.</li>
+        <li><strong>Format:</strong> 90 minutes for the talk, including questions, followed by 30 minutes of discussion.</li>
+        <li><strong>Organiser:</strong> Olivier de Gaay Fortman.</li>
+      </ul>
+    </section>
 
-  <h2>Participation</h2>
-  <p>
-    If you are interested in participating, please email
-    <a href="mailto:o.degaayfortman@imperial.ac.uk">
-      o.degaayfortman@imperial.ac.uk</a>.
-    Talks will be distributed after the opening talk,
-    given by Olivier de Gaay Fortman.
-  </p>
+    <section id="participation">
+      <h2>Participation</h2>
+      <p>
+        If you are interested in participating, please email
+        <a href="mailto:o.degaayfortman@imperial.ac.uk">o.degaayfortman@imperial.ac.uk</a>.
+        Talks will be distributed after the opening talk, given by Olivier de Gaay Fortman.
+      </p>
+    </section>
 
-<h2>Program and references</h2>
-<p>
-  See the <a href="prismaticprogram.pdf">seminar programme (PDF)</a>
-  for the meeting dates, talk outlines and suggested reading.
-</p>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Prismatic cohomology gives a common source for several cohomology theories; its central achievement
+        is a system of <em>integral comparison theorems</em>: one cohomology theory recovers de Rham cohomology
+        of the total space, crystalline cohomology of the special fibre, and \(p\)-adic étale cohomology of
+        the geometric generic fibre. Working integrally means that we keep track of \(p\)-power torsion,
+        rather than passing to \(\mathbf{Q}_p\).
+      </p>
+      <p>
+        Let \(K/\mathbf{Q}_p\) be a finite field extension with ring of integers \(\mathcal{O}_K\),
+        residue field \(k\), and uniformiser \(\pi\). Consider a smooth projective morphism
+      </p>
+      <div class="math-display">
+        \[X \longrightarrow S = \operatorname{Spec}(\mathcal{O}_K).\]
+      </div>
+      <p>
+        The generic fibre \(X_\eta = X_K\) is defined over a field of characteristic zero, while the special
+        fibre \(X_0 = X_k\) is defined over a field of characteristic \(p\). There are several natural ways
+        to study this family:
+      </p>
+      <div class="table-scroll" role="region" aria-label="Cohomology theories" tabindex="0">
+        <table class="cohomology-table">
+          <thead>
+            <tr><th scope="col">Cohomology</th><th scope="col">Main features</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">\(H^i_{\mathrm{dR}}(X/\mathcal{O}_K)\)</th>
+              <td>Differential forms on the whole family. After inverting \(p\), this becomes the de Rham cohomology of the generic fibre \(X_K\), equipped with its Hodge filtration.</td>
+            </tr>
+            <tr>
+              <th scope="row">\(H^i_{\mathrm{crys}}(X_0/W(k))\)</th>
+              <td>Crystalline cohomology of the special fibre, equipped with Frobenius. Here \(W(k)\) is the unramified extension of \(\mathbf{Z}_p\) with residue field \(k\).</td>
+            </tr>
+            <tr>
+              <th scope="row">\(H^i_{\mathrm{\acute{e}t}}(X_{\overline{K}},\mathbf{Z}_p)\)</th>
+              <td>Étale cohomology of the geometric generic fibre, equipped with the \(\operatorname{Gal}(\overline{K}/K)\) action.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Comparing these cohomology groups is a central problem of \(p\)-adic Hodge theory. Prismatic cohomology
+        yields a very clean way to do exactly that, while also keeping track of mod-\(p\) information
+        (which is invisible in the more classical setting of \(p\)-adic Hodge theory, where one usually
+        inverts \(p\) in the coefficient rings). The prismatic site puts comparison theories into one framework
+        and yields new integral consequences, thereby constituting a reorganisation of the foundations of
+        integral \(p\)-adic Hodge theory.
+      </p>
+
+      <h3>Goal of this learning seminar</h3>
+      <p>The aim of this learning seminar is to:</p>
+      <ol>
+        <li>Learn the basics of the foundations of prismatic cohomology.</li>
+        <li>Study and understand the various comparison theorems.</li>
+        <li>Learn to work with prismatic cohomology by working out some beautiful examples and applications.</li>
+      </ol>
+    </section>
+
+    <section id="comparisons">
+      <h2>A little bit more detail</h2>
+      <p>
+        Consider the smooth projective family \(X/\mathcal{O}_K\). One may ask:
+        <em>Can the above different cohomology groups, together with their additional structures, be recovered
+        from a single integral object?</em> This leads one to consider Breuil–Kisin prisms.
+        Let \(A = W(k)[[u]]\), let \(\theta:A\to\mathcal{O}_K\) send \(u\) to \(\pi\), and write
+        \(I = \ker\theta = (E(u))\), with \(E\) Eisenstein. Equip \(A\) with Witt-vector Frobenius on \(W(k)\)
+        and \(\varphi_A(u)=u^p\). The pair \((A,I)\) is the <em>Breuil–Kisin prism</em>.
+        For the \(p\)-adic completion \(\widehat{X}\), there are finitely generated \(A\)-modules
+      </p>
+      <div class="math-display">\[H^i_\Delta(\widehat{X}/A).\]</div>
+      <p>
+        They have cup products and a semilinear Frobenius \(F\), so \(F(ax)=\varphi_A(a)F(x)\).
+        The induced map
+      </p>
+      <div class="math-display">
+        \[H^i_\Delta(\widehat{X}/A)\otimes_{A,\varphi_A}A[1/E]
+        \xrightarrow{\sim}H^i_\Delta(\widehat{X}/A)[1/E]\]
+      </div>
+      <p>
+        is an isomorphism. The different classical theories are recovered by changing coefficients in this
+        cohomology theory. Write \(H^i_\Delta(\widehat{X}/A;B,f)\) for prismatic cohomology with coefficients
+        changed along \(f:A\to B\): change coefficients in a projective cochain complex computing the theory,
+        then take its \(i\)-th cohomology.
+      </p>
+
+      <h3>1. De Rham comparison</h3>
+      <p>With \(\alpha=\theta\circ\varphi_A\), there are natural isomorphisms</p>
+      <div class="math-display">
+        \[H^i_\Delta(\widehat{X}/A;\mathcal{O}_K,\alpha)
+        \cong H^i_{\mathrm{dR}}(X/\mathcal{O}_K),\]
+        \[H^i_{\mathrm{dR}}(X/\mathcal{O}_K)\otimes_{\mathcal{O}_K}K
+        \cong H^i_{\mathrm{dR}}(X_K/K).\]
+      </div>
+      <p>Thus this specialisation recovers differential-form cohomology of the family and its generic fibre.</p>
+
+      <h3>2. Crystalline comparison</h3>
+      <p>
+        Let \(\beta:A\to W(k)\) send \(u\) to \(0\) and act by Witt-vector Frobenius on \(W(k)\). Then
+      </p>
+      <div class="math-display">
+        \[H^i_\Delta(\widehat{X}/A;W(k),\beta)\cong H^i_{\mathrm{crys}}(X_0/W(k)),\]
+      </div>
+      <p>
+        compatibly with Frobenius. Changing coefficients further to \(k\), at the cochain level,
+        recovers \(H^i_{\mathrm{dR}}(X_0/k)\).
+      </p>
+
+      <h3>3. Hodge–Tate comparison</h3>
+      <p>
+        The untwisted specialisation along \(\theta\) is governed by the groups of differential forms.
+        Put \(L=I/I^2\), an invertible \(\mathcal{O}_K\)-module. There is a spectral sequence of cohomology groups
+      </p>
+      <div class="math-display">
+        \[E_2^{a,b}=H^a(X,\Omega^b_{X/\mathcal{O}_K})\otimes_{\mathcal{O}_K}L^{\otimes(-b)}
+        \Longrightarrow H^{a+b}_\Delta(\widehat{X}/A;\mathcal{O}_K,\theta).\]
+      </div>
+      <p>
+        The terms with \(a+b=i\) contribute to degree \(i\). Integral degeneration or a direct-sum
+        decomposition is not being asserted.
+      </p>
+
+      <h3>4. Étale comparison</h3>
+      <p>
+        Set \(C=\widehat{\overline{K}}\), let \(\mathcal{O}_C^\flat\) be its tilt, and put
+        \(C^\flat=\operatorname{Frac}(\mathcal{O}_C^\flat)\). The rings
+        \(A_{\mathrm{inf}}=W(\mathcal{O}_C^\flat)\) and \(B=W(C^\flat)\) will be explained in
+        <a href="#talk-2">meeting 2</a>. Base change of the family to \(\mathcal{O}_C\) gives
+      </p>
+      <div class="math-display">
+        \[P_C^i:=H^i_\Delta(\widehat{X}_{\mathcal{O}_C}/A_{\mathrm{inf}};B)
+        \cong H^i_{\mathrm{\acute{e}t}}(X_{\overline{K}},\mathbf{Z}_p)\otimes_{\mathbf{Z}_p}B.\]
+      </div>
+      <p>
+        Here the coefficient map is the natural inclusion \(A_{\mathrm{inf}}\to B\).
+        The comparison respects Galois actions; Frobenius on the right acts only on \(B\).
+        Since \(B^{F=1}=\mathbf{Z}_p\), it also gives
+      </p>
+      <div class="math-display">
+        \[H^i_{\mathrm{\acute{e}t}}(X_{\overline{K}},\mathbf{Z}_p)\cong(P_C^i)^{F=1},\]
+      </div>
+      <p>
+        where \(F=1\) now means ordinary fixed elements of a cohomology group.
+        Compatible roots of \(\pi\) give the prism map \(A\to A_{\mathrm{inf}}\)
+        linking this comparison to the original theory.
+      </p>
+      <p>
+        <em>Some references:</em> <a href="#ref-bs">[BS]</a>, Theorem 1.8 and Example 1.9;
+        <a href="#ref-bms2">[BMS2]</a>, Theorem 1.2; <a href="#ref-bms1">[BMS1]</a>, Theorem 1.8
+        for the étale comparison; <a href="#ref-k">[K]</a>, Theorem 23.2.5 for the torsion inequality.
+        See also <a href="#ref-fkw">[FKW]</a>, §2.1.
+      </p>
+    </section>
+
+    <section id="schedule">
+      <h2>Programme and dates</h2>
+      <p>
+        All meetings take place from <strong>10:00 to 12:00</strong>.
+        The first meeting and the meeting in the first week of December are on Thursdays;
+        all other meetings are on Fridays.
+      </p>
+      <div class="table-scroll" role="region" aria-label="Meeting schedule" tabindex="0">
+        <table class="schedule">
+          <caption>October–December 2026</caption>
+          <thead>
+            <tr><th scope="col">Meeting</th><th scope="col">Date</th><th scope="col">Topic</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">1</th><td><time datetime="2026-10-22">Thu 22 October</time></td><td><a href="#talk-1">A geometric motivation; the comparison problem</a></td></tr>
+            <tr><th scope="row">2</th><td><time datetime="2026-10-30">Fri 30 October</time></td><td><a href="#talk-2">\(\delta\)-rings, prisms and the \(A_{\mathrm{inf}}\) example</a></td></tr>
+            <tr><th scope="row">3</th><td><time datetime="2026-11-06">Fri 6 November</time></td><td><a href="#talk-3">The prismatic site and its cohomology</a></td></tr>
+            <tr><th scope="row">4</th><td><time datetime="2026-11-13">Fri 13 November</time></td><td><a href="#talk-4">Crystalline, Hodge–Tate and de Rham comparisons</a></td></tr>
+            <tr><th scope="row">5</th><td><time datetime="2026-11-20">Fri 20 November</time></td><td><a href="#talk-5">Étale comparison and integral consequences</a></td></tr>
+            <tr><th scope="row">6</th><td><time datetime="2026-11-27">Fri 27 November</time></td><td><a href="#talk-6">Essential dimension I: restriction of mod-\(p\) cohomology</a></td></tr>
+            <tr><th scope="row">7</th><td><time datetime="2026-12-03">Thu 3 December</time></td><td><a href="#talk-7">Essential dimension II: incompressibility of covers</a></td></tr>
+            <tr><th scope="row">8</th><td><time datetime="2026-12-11">Fri 11 December</time></td><td><a href="#talk-8">Wild Brauer classes I: the cohomological input</a></td></tr>
+            <tr><th scope="row">9</th><td><time datetime="2026-12-18">Fri 18 December</time></td><td><a href="#talk-9">Wild Brauer classes II: slopes and arithmetic</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="talks">
+      <h2>Talk outlines</h2>
+      <h3>Part I: foundations</h3>
+
+      <article id="talk-1">
+        <h4>1. Motivation and the comparison problem</h4>
+        <p class="talk-date">Thursday 22 October 2026 · 10:00–12:00</p>
+        <p>
+          Introduce \(X/\mathcal{O}_K\), its two fibres and the three cohomology theories in the
+          <a href="#introduction">introduction</a>. Explain the Hodge, Frobenius and Galois structures,
+          and why retaining \(p\)-torsion matters. Describe the purpose of crystalline thickenings informally.
+          Preview how differential forms constrain mod-\(p\) restriction maps and how this leads to the two applications.
+        </p>
+        <p><strong>Goal of this talk:</strong> Describe degree-one cohomology of an elliptic curve with good reduction, and explain what the common prismatic complex must remember.</p>
+        <p><strong>Scope:</strong> State the comparison package informally; no crystalline-site construction or proofs.</p>
+        <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, I; <a href="#ref-k">[K]</a>, §1; <a href="#ref-fkw">[FKW]</a> and <a href="#ref-anp">[ANP]</a>, introductions; [N1]. <a href="#ref-bdj">[BdJ]</a> is background.</p>
+      </article>
+
+      <article id="talk-2">
+        <h4>2. \(\delta\)-rings, prisms and the \(A_{\mathrm{inf}}\) example</h4>
+        <p class="talk-date">Friday 30 October 2026 · 10:00–12:00</p>
+        <p>
+          Define a \(p\)-derivation and its Frobenius lift \(\varphi(x)=x^p+p\delta(x)\).
+          Recall Witt vectors and define a bounded prism, explaining the Cartier ideal, completeness
+          and \(p\in I+\varphi(I)A\). Work through three examples: the crystalline prism
+          \((W(k),(p))\), the Breuil–Kisin prism, and the perfect prism attached to \(\mathcal{O}_C\),
+          where \(C=\widehat{\overline{K}}\). For the last example, explain the tilt \(\mathcal{O}_C^\flat\),
+          the ring \(A_{\mathrm{inf}}=W(\mathcal{O}_C^\flat)\), and Fontaine’s map with its principal kernel.
+          State the perfect-prism/perfectoid correspondence.
+        </p>
+        <p><strong>Goal of this talk:</strong> Verify \((\mathbf{Z}_p[[u]],(u-p))\), distinguish the maps \(u\mapsto p,p^p,0\), and construct \(u\mapsto[\pi^\flat]\) into \(A_{\mathrm{inf}}\) using compatible roots. Check compatibility with Frobenius and reduction.</p>
+        <p><strong>Scope:</strong> Devote roughly half the talk to definitions and the first two examples, and half to \(A_{\mathrm{inf}}\). Take the Witt-vector construction, general derived completeness and the perfectoid correspondence as inputs. Explain derived reduction through one two-term example; introduce \(W(C^\flat)\) only as needed for the <a href="#comparisons">comparison theorems above</a>. Free \(\delta\)-rings and other period rings are optional reading.</p>
+        <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, II–IV; <a href="#ref-bs">[BS]</a>, §§2–3, definitions and examples; <a href="#ref-bms1">[BMS1]</a>, §3. <a href="#ref-k">[K]</a>, §§2–3, 5–8, and [N3] are companions.</p>
+      </article>
+
+      <article id="talk-3">
+        <h4>3. The prismatic site and its cohomology</h4>
+        <p class="talk-date">Friday 6 November 2026 · 10:00–12:00</p>
+        <p>
+          For a smooth formal scheme \(Y/(A/I)\), define the objects and coverings of \((Y/A)_\Delta\),
+          and its structure and reduced structure sheaves. Explain how their cohomology gives the two complexes.
+          Describe the origin of Frobenius, functoriality and cup products. State completed base change and
+          proper finiteness, which make the comparisons usable.
+        </p>
+        <p><strong>Goal of this talk:</strong> Compute the relative point \(Y=\operatorname{Spf}(A/I)\), obtaining the complex \(A\), its Frobenius and its reduction \(A/I\).</p>
+        <p><strong>Scope:</strong> Sketch the role of prismatic envelopes and Čech computations; take their existence and descent properties as inputs.</p>
+        <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, V; <a href="#ref-k">[K]</a>, §§11–12; <a href="#ref-bs">[BS]</a>, §4 and Theorem 1.8; [N5].</p>
+      </article>
+
+      <h3>Part II: comparison theorems</h3>
+
+      <article id="talk-4">
+        <h4>4. Crystalline, Hodge–Tate and de Rham comparisons</h4>
+        <p class="talk-date">Friday 13 November 2026 · 10:00–12:00</p>
+        <p>
+          State the first three <a href="#comparisons">comparisons above</a>, keeping the coefficient maps
+          \(\theta,\alpha,\beta\) distinct. Explain the Hodge–Tate cohomology sheaves and their global spectral
+          sequence. Use the Bockstein to illustrate how differential forms enter and how the de Rham differential
+          is recovered.
+        </p>
+        <p><strong>Goal of this talk:</strong> Work through the Hodge–Tate map in degrees 0 and 1 for one coordinate, including the twist \(I/I^2\).</p>
+        <p><strong>Scope:</strong> Prove this local calculation; state the general comparison and gluing results. Full proofs of all three theorems are beyond this meeting.</p>
+        <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, V–VI; <a href="#ref-bs">[BS]</a>, Theorem 1.8 and §§5–6; [N5–N6]. <a href="#ref-bdj">[BdJ]</a> and <a href="#ref-k">[K]</a>, §§14–15, are background.</p>
+      </article>
+
+      <article id="talk-5">
+        <h4>5. Étale comparison and integral consequences</h4>
+        <p class="talk-date">Friday 20 November 2026 · 10:00–12:00</p>
+        <p>
+          State the finite-coefficient comparison over a perfect prism. Explain derived Frobenius fixed points
+          and their elementary characteristic-\(p\) model, the Artin–Schreier sequence. Indicate why perfection
+          and descent occur in the proof, taking the deeper results as inputs. Deduce the mod-\(p\) dimension
+          inequality from comparison and semicontinuity of a perfect complex.
+        </p>
+        <p><strong>Goal of this talk:</strong> Explain the group-level formula in the <a href="#comparisons">étale comparison above</a> and its Galois action. Distinguish this special setting from the general derived fixed-point formula, where kernels alone need not suffice.</p>
+        <p><strong>Scope:</strong> Prove the dimension inequality using the comparison theorem as an input.</p>
+        <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, IX; <a href="#ref-k">[K]</a>, §§22–23; <a href="#ref-bs">[BS]</a>, §9; [N2, N4].</p>
+      </article>
+
+      <h3>Part III: applications</h3>
+
+      <article id="talk-6">
+        <h4>6. Essential dimension I: restriction of mod-\(p\) cohomology</h4>
+        <p class="talk-date">Friday 27 November 2026 · 10:00–12:00</p>
+        <p>
+          Use <a href="#ref-fkw">[FKW]</a>, §2.1, to translate a restriction map into a map of mod-\(p\)
+          prismatic complexes over \(k[[u]]\). Explain the small-degree freeness input and the role of Cartier
+          theory in obtaining a lower bound from differential forms. Keep the unramified good-reduction and
+          degree hypotheses visible.
+        </p>
+        <p><strong>Goal of this talk:</strong> Follow the image module through specialisation and localisation when the open is dense in the special fibre. Explain which comparison is used at each step.</p>
+        <p><strong>Scope:</strong> Give this central argument; state the freeness and Cartier inputs, and outline the additional passage to arbitrary complex opens.</p>
+        <p><strong>Reading:</strong> <a href="#ref-fkw">[FKW]</a>, §§2.1–2.2, especially the proof of the restriction bound; [N1–N2].</p>
+      </article>
+
+      <article id="talk-7">
+        <h4>7. Essential dimension II: incompressibility of covers</h4>
+        <p class="talk-date">Thursday 3 December 2026 · 10:00–12:00</p>
+        <p>
+          Define essential dimension and \(p\)-essential dimension of a finite cover. Explain how characteristic
+          classes from the covering group and the restriction bound obstruct compression to a smaller-dimensional
+          variety. Show how trace handles auxiliary covers of degree prime to \(p\).
+        </p>
+        <p><strong>Goal of this talk:</strong> Explain why the mod-\(p\) homology cover of a complex abelian variety is \(p\)-incompressible for sufficiently large \(p\), using the cup products of degree-one classes.</p>
+        <p><strong>Scope:</strong> Prove the deduction from the restriction theorem. Leave logarithmic extensions, Heisenberg groups and Shimura varieties for further study.</p>
+        <p><strong>Reading:</strong> <a href="#ref-fkw">[FKW]</a>, introduction and §2.3, especially Corollary 2.3.12 and its inputs.</p>
+      </article>
+
+      <article id="talk-8">
+        <h4>8. Wild Brauer classes I: the cohomological input</h4>
+        <p class="talk-date">Friday 11 December 2026 · 10:00–12:00</p>
+        <p>
+          Introduce the Brauer group, the Kummer sequence and evaluation at local points. Explain how restriction
+          maps and vanishing cycles enter <a href="#ref-anp">[ANP]</a>. Introduce the Nygaard filtration through
+          its relation to divisibility by powers of \(p\) under Frobenius, and state the syntomic/vanishing-cycle
+          comparison needed in the argument.
+        </p>
+        <p><strong>Goal of this talk:</strong> Unpack the Frobenius eigenspace and restriction map in <a href="#ref-anp">[ANP]</a>, Theorem 1.2.2, and identify the role of each comparison theorem.</p>
+        <p><strong>Scope:</strong> Explain the additional tools and their use; take their general construction and comparison proofs as inputs.</p>
+        <p><strong>Reading:</strong> <a href="#ref-anp">[ANP]</a>, §§2–3; <a href="#ref-bms2">[BMS2]</a>, §10; <a href="#ref-bs">[BS]</a>, §§12, 15 as background.</p>
+      </article>
+
+      <article id="talk-9">
+        <h4>9. Wild Brauer classes II: slopes and arithmetic</h4>
+        <p class="talk-date">Friday 18 December 2026 · 10:00–12:00</p>
+        <p>
+          Introduce Newton slopes and their relation to Hodge numbers, then explain the total-slope argument
+          of <a href="#ref-anp">[ANP]</a>, §4. Combine it with <a href="#talk-8">meeting 8</a> to outline the
+          construction of a Brauer class with surjective evaluation after finite extension. Deduce the
+          weak-approximation consequence, stating all hypotheses.
+        </p>
+        <p><strong>Goal of this talk:</strong> Trace the implication from a nonzero global 2-form to nonconstant Brauer evaluation; use an abelian surface as a guiding geometric example.</p>
+        <p><strong>Scope:</strong> Focus on the main argument and arithmetic deduction. Explicit products of elliptic curves and prismatic Dieudonné theory are optional extensions.</p>
+        <p><strong>Reading:</strong> <a href="#ref-anp">[ANP]</a>, §§4–5, and optionally §6; <a href="#ref-alb">[ALB]</a> for the last direction.</p>
+      </article>
+    </section>
+
+    <section id="references">
+      <h2>Programme and references</h2>
+      <p>
+        See also the <a href="prismaticprogram.pdf">seminar programme (PDF)</a>
+        for the meeting dates, talk outlines and suggested reading.
+      </p>
+      <h3>Literature</h3>
+      <ul class="reference-list">
+        <li id="ref-b">
+          <strong>[B]</strong> Bhargav Bhatt, <em>Prismatic cohomology</em>, Eilenberg Lectures,
+          Columbia University, 2018. An efficient sequence from \(\delta\)-rings to comparisons;
+          lectures are available separately.
+          <a href="https://websites.umich.edu/~bhattb/teaching/prismatic-columbia/">Lecture notes and course page</a>
+        </li>
+        <li id="ref-k">
+          <strong>[K]</strong> Kiran S. Kedlaya, <em>Notes on prismatic cohomology</em>;
+          UC San Diego course, spring 2021. A detailed companion with exercises, extra background
+          and recorded lectures.
+          <a href="https://kskedlaya.org/prismatic/">Online notes</a> ·
+          <a href="https://kskedlaya.org/math206a-spr21/">Course page, PDF and recordings</a>
+        </li>
+        <li id="ref-bs">
+          <strong>[BS]</strong> Bhargav Bhatt and Peter Scholze, <em>Prisms and Prismatic Cohomology</em>.
+          This is the foundational paper. Section references in this programme use arXiv version 4 (2022).
+          <a href="https://arxiv.org/abs/1905.08229v4">arXiv:1905.08229v4</a>
+        </li>
+        <li id="ref-bdj">
+          <strong>[BdJ]</strong> Bhargav Bhatt and Aise Johan de Jong,
+          <em>Crystalline cohomology and de Rham cohomology</em> (2011).
+          A short treatment of the crystalline–de Rham comparison.
+          <a href="https://arxiv.org/abs/1110.5001">arXiv:1110.5001</a>
+        </li>
+        <li id="ref-bms1">
+          <strong>[BMS1]</strong> Bhargav Bhatt, Matthew Morrow and Peter Scholze,
+          <em>Integral \(p\)-adic Hodge theory</em>. Selected reading: §3 (perfectoid rings)
+          and §4 (Breuil–Kisin–Fargues modules).
+          <a href="https://arxiv.org/abs/1602.03148">arXiv:1602.03148</a>
+        </li>
+        <li id="ref-bms2">
+          <strong>[BMS2]</strong> Bhargav Bhatt, Matthew Morrow and Peter Scholze,
+          <em>Topological Hochschild homology and integral \(p\)-adic Hodge theory</em>.
+          Advanced reading suggested by Ambrosi: §§7.4–8 and §10; Nygaard complexes,
+          characteristic \(p\), and nearby cycles.
+          <a href="https://arxiv.org/abs/1802.03261">arXiv:1802.03261</a>
+        </li>
+        <li id="ref-fkw">
+          <strong>[FKW]</strong> Benson Farb, Mark Kisin and Jesse Wolfson,
+          <em>Essential dimension via prismatic cohomology</em>.
+          Main application: introduction and §§2.1–2.2; essential dimension in §2.3.
+          <a href="https://projecteuclid.org/journals/duke-mathematical-journal/volume-173/issue-15/Essential-dimension-via-prismatic-cohomology/10.1215/00127094-2023-0071.full">Duke Mathematical Journal 173(15), 2024</a>
+        </li>
+        <li id="ref-anp">
+          <strong>[ANP]</strong> Emiliano Ambrosi, Rachel Newton and Margherita Pagano,
+          <em>Wild Brauer classes via prismatic cohomology</em>.
+          Second application. Start with the introduction; the prismatic arguments are in §§3–4.
+          <a href="https://emiliano-ambrosi.perso.math.cnrs.fr/pdf/preprint/PrismaticBrauer.pdf">Authors’ preprint (version dated 30 October 2025)</a>
+        </li>
+      </ul>
+
+      <h3>Further directions</h3>
+      <ul class="reference-list">
+        <li id="ref-alb">
+          <strong>[ALB]</strong> Johannes Anschütz and Arthur-César Le Bras,
+          <em>Prismatic Dieudonné theory</em>.
+          An application to \(p\)-divisible groups; suitable for a subsequent series.
+          <a href="https://arxiv.org/abs/1907.10525">arXiv:1907.10525</a>
+        </li>
+        <li id="ref-bl">
+          <strong>[BL]</strong> Bhargav Bhatt and Jacob Lurie,
+          <em>Absolute prismatic cohomology</em> (2022).
+          A later route through the Cartier–Witt stack and prismatic crystals.
+          <a href="https://arxiv.org/abs/2201.06120">arXiv:2201.06120</a>
+        </li>
+        <li id="ref-e">
+          <strong>[E]</strong> Matthew Emerton, <em>Prismatic Cohomology</em>, Chicago course, spring 2020.
+          Supplementary notes expanding technical points in Bhatt’s lectures.
+          <a href="https://www.math.uchicago.edu/~emerton/prismatic/prismatic.html">Course page and notes</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Prismatic cohomology · Learning seminar at Imperial College London · October–December 2026</p>
+    <p><a href="./">Back to homepage</a> · <a href="prismaticprogram.pdf">Seminar programme (PDF)</a></p>
+  </footer>
 </body>
 </html>
