@@ -302,10 +302,11 @@
         <p>
           Introduce \(X/\mathcal{O}_K\), its two fibres and the three cohomology theories in the
           <a href="#introduction">introduction</a>. Explain the Hodge, Frobenius and Galois structures,
-          and why retaining \(p\)-torsion matters. Describe the purpose of crystalline thickenings informally.
-          Preview how differential forms constrain mod-\(p\) restriction maps and how this leads to the two applications.
+          and why retaining \(p\)-torsion matters. Describe the purpose of crystalline thickenings informally,
+          and preview how differential forms constrain mod-\(p\) restriction maps and lead to the two applications.
+          As a guiding example, describe degree-one cohomology of an elliptic curve with good reduction and
+          explain what the common prismatic complex must remember.
         </p>
-        <p><strong>Goal of this talk:</strong> Describe degree-one cohomology of an elliptic curve with good reduction, and explain what the common prismatic complex must remember.</p>
         <p><strong>Scope:</strong> State the comparison package informally; no crystalline-site construction or proofs.</p>
         <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, I; <a href="#ref-k">[K]</a>, §1; <a href="#ref-fkw">[FKW]</a> and <a href="#ref-anp">[ANP]</a>, introductions; [N1]. <a href="#ref-bdj">[BdJ]</a> is background.</p>
       </article>
@@ -319,10 +320,12 @@
           and \(p\in I+\varphi(I)A\). Work through three examples: the crystalline prism
           \((W(k),(p))\), the Breuil–Kisin prism, and the perfect prism attached to \(\mathcal{O}_C\),
           where \(C=\widehat{\overline{K}}\). For the last example, explain the tilt \(\mathcal{O}_C^\flat\),
-          the ring \(A_{\mathrm{inf}}=W(\mathcal{O}_C^\flat)\), and Fontaine’s map with its principal kernel.
-          State the perfect-prism/perfectoid correspondence.
+          the ring \(A_{\mathrm{inf}}=W(\mathcal{O}_C^\flat)\), and Fontaine’s map with its principal kernel,
+          and state the perfect-prism/perfectoid correspondence. As concrete calculations, verify
+          \((\mathbf{Z}_p[[u]],(u-p))\), distinguish the maps \(u\mapsto p,p^p,0\), and construct
+          \(u\mapsto[\pi^\flat]\) into \(A_{\mathrm{inf}}\) using compatible roots, checking compatibility
+          with Frobenius and reduction.
         </p>
-        <p><strong>Goal of this talk:</strong> Verify \((\mathbf{Z}_p[[u]],(u-p))\), distinguish the maps \(u\mapsto p,p^p,0\), and construct \(u\mapsto[\pi^\flat]\) into \(A_{\mathrm{inf}}\) using compatible roots. Check compatibility with Frobenius and reduction.</p>
         <p><strong>Scope:</strong> Devote roughly half the talk to definitions and the first two examples, and half to \(A_{\mathrm{inf}}\). Take the Witt-vector construction, general derived completeness and the perfectoid correspondence as inputs. Explain derived reduction through one two-term example; introduce \(W(C^\flat)\) only as needed for the <a href="#comparisons">comparison theorems above</a>. Free \(\delta\)-rings and other period rings are optional reading.</p>
         <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, II–IV; <a href="#ref-bs">[BS]</a>, §§2–3, definitions and examples; <a href="#ref-bms1">[BMS1]</a>, §3. <a href="#ref-k">[K]</a>, §§2–3, 5–8, and [N3] are companions.</p>
       </article>
@@ -334,9 +337,9 @@
           For a smooth formal scheme \(Y/(A/I)\), define the objects and coverings of \((Y/A)_\Delta\),
           and its structure and reduced structure sheaves. Explain how their cohomology gives the two complexes.
           Describe the origin of Frobenius, functoriality and cup products. State completed base change and
-          proper finiteness, which make the comparisons usable.
+          proper finiteness, which make the comparisons usable. Conclude by computing the relative point
+          \(Y=\operatorname{Spf}(A/I)\), obtaining the complex \(A\), its Frobenius and its reduction \(A/I\).
         </p>
-        <p><strong>Goal of this talk:</strong> Compute the relative point \(Y=\operatorname{Spf}(A/I)\), obtaining the complex \(A\), its Frobenius and its reduction \(A/I\).</p>
         <p><strong>Scope:</strong> Sketch the role of prismatic envelopes and Čech computations; take their existence and descent properties as inputs.</p>
         <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, V; <a href="#ref-k">[K]</a>, §§11–12; <a href="#ref-bs">[BS]</a>, §4 and Theorem 1.8; [N5].</p>
       </article>
@@ -350,9 +353,9 @@
           State the first three <a href="#comparisons">comparisons above</a>, keeping the coefficient maps
           \(\theta,\alpha,\beta\) distinct. Explain the Hodge–Tate cohomology sheaves and their global spectral
           sequence. Use the Bockstein to illustrate how differential forms enter and how the de Rham differential
-          is recovered.
+          is recovered. The central local calculation is the Hodge–Tate map in degrees 0 and 1 for one coordinate,
+          including the twist \(I/I^2\).
         </p>
-        <p><strong>Goal of this talk:</strong> Work through the Hodge–Tate map in degrees 0 and 1 for one coordinate, including the twist \(I/I^2\).</p>
         <p><strong>Scope:</strong> Prove this local calculation; state the general comparison and gluing results. Full proofs of all three theorems are beyond this meeting.</p>
         <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, V–VI; <a href="#ref-bs">[BS]</a>, Theorem 1.8 and §§5–6; [N5–N6]. <a href="#ref-bdj">[BdJ]</a> and <a href="#ref-k">[K]</a>, §§14–15, are background.</p>
       </article>
@@ -363,10 +366,11 @@
         <p>
           State the finite-coefficient comparison over a perfect prism. Explain derived Frobenius fixed points
           and their elementary characteristic-\(p\) model, the Artin–Schreier sequence. Indicate why perfection
-          and descent occur in the proof, taking the deeper results as inputs. Deduce the mod-\(p\) dimension
-          inequality from comparison and semicontinuity of a perfect complex.
+          and descent occur in the proof, taking the deeper results as inputs. Explain the group-level formula in
+          the <a href="#comparisons">étale comparison above</a> and its Galois action, distinguishing this special
+          setting from the general derived fixed-point formula, where kernels alone need not suffice. Deduce the
+          mod-\(p\) dimension inequality from comparison and semicontinuity of a perfect complex.
         </p>
-        <p><strong>Goal of this talk:</strong> Explain the group-level formula in the <a href="#comparisons">étale comparison above</a> and its Galois action. Distinguish this special setting from the general derived fixed-point formula, where kernels alone need not suffice.</p>
         <p><strong>Scope:</strong> Prove the dimension inequality using the comparison theorem as an input.</p>
         <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, IX; <a href="#ref-k">[K]</a>, §§22–23; <a href="#ref-bs">[BS]</a>, §9; [N2, N4].</p>
       </article>
@@ -380,9 +384,9 @@
           Use <a href="#ref-fkw">[FKW]</a>, §2.1, to translate a restriction map into a map of mod-\(p\)
           prismatic complexes over \(k[[u]]\). Explain the small-degree freeness input and the role of Cartier
           theory in obtaining a lower bound from differential forms. Keep the unramified good-reduction and
-          degree hypotheses visible.
+          degree hypotheses visible. The central argument follows the image module through specialisation and
+          localisation when the open is dense in the special fibre, making clear which comparison is used at each step.
         </p>
-        <p><strong>Goal of this talk:</strong> Follow the image module through specialisation and localisation when the open is dense in the special fibre. Explain which comparison is used at each step.</p>
         <p><strong>Scope:</strong> Give this central argument; state the freeness and Cartier inputs, and outline the additional passage to arbitrary complex opens.</p>
         <p><strong>Reading:</strong> <a href="#ref-fkw">[FKW]</a>, §§2.1–2.2, especially the proof of the restriction bound; [N1–N2].</p>
       </article>
@@ -393,9 +397,10 @@
         <p>
           Define essential dimension and \(p\)-essential dimension of a finite cover. Explain how characteristic
           classes from the covering group and the restriction bound obstruct compression to a smaller-dimensional
-          variety. Show how trace handles auxiliary covers of degree prime to \(p\).
+          variety, and show how trace handles auxiliary covers of degree prime to \(p\). Apply this framework to
+          explain why the mod-\(p\) homology cover of a complex abelian variety is \(p\)-incompressible for
+          sufficiently large \(p\), using cup products of degree-one classes.
         </p>
-        <p><strong>Goal of this talk:</strong> Explain why the mod-\(p\) homology cover of a complex abelian variety is \(p\)-incompressible for sufficiently large \(p\), using the cup products of degree-one classes.</p>
         <p><strong>Scope:</strong> Prove the deduction from the restriction theorem. Leave logarithmic extensions, Heisenberg groups and Shimura varieties for further study.</p>
         <p><strong>Reading:</strong> <a href="#ref-fkw">[FKW]</a>, introduction and §2.3, especially Corollary 2.3.12 and its inputs.</p>
       </article>
@@ -407,9 +412,9 @@
           Introduce the Brauer group, the Kummer sequence and evaluation at local points. Explain how restriction
           maps and vanishing cycles enter <a href="#ref-anp">[ANP]</a>. Introduce the Nygaard filtration through
           its relation to divisibility by powers of \(p\) under Frobenius, and state the syntomic/vanishing-cycle
-          comparison needed in the argument.
+          comparison needed in the argument. In particular, unpack the Frobenius eigenspace and restriction map in
+          <a href="#ref-anp">[ANP]</a>, Theorem 1.2.2, and identify the role of each comparison theorem.
         </p>
-        <p><strong>Goal of this talk:</strong> Unpack the Frobenius eigenspace and restriction map in <a href="#ref-anp">[ANP]</a>, Theorem 1.2.2, and identify the role of each comparison theorem.</p>
         <p><strong>Scope:</strong> Explain the additional tools and their use; take their general construction and comparison proofs as inputs.</p>
         <p><strong>Reading:</strong> <a href="#ref-anp">[ANP]</a>, §§2–3; <a href="#ref-bms2">[BMS2]</a>, §10; <a href="#ref-bs">[BS]</a>, §§12, 15 as background.</p>
       </article>
@@ -420,10 +425,10 @@
         <p>
           Introduce Newton slopes and their relation to Hodge numbers, then explain the total-slope argument
           of <a href="#ref-anp">[ANP]</a>, §4. Combine it with <a href="#talk-8">meeting 8</a> to outline the
-          construction of a Brauer class with surjective evaluation after finite extension. Deduce the
-          weak-approximation consequence, stating all hypotheses.
+          construction of a Brauer class with surjective evaluation after finite extension. Using an abelian surface
+          as a guiding geometric example, trace the implication from a nonzero global 2-form to nonconstant Brauer
+          evaluation, and deduce the weak-approximation consequence, stating all hypotheses.
         </p>
-        <p><strong>Goal of this talk:</strong> Trace the implication from a nonzero global 2-form to nonconstant Brauer evaluation; use an abelian surface as a guiding geometric example.</p>
         <p><strong>Scope:</strong> Focus on the main argument and arithmetic deduction. Explicit products of elliptic curves and prismatic Dieudonné theory are optional extensions.</p>
         <p><strong>Reading:</strong> <a href="#ref-anp">[ANP]</a>, §§4–5, and optionally §6; <a href="#ref-alb">[ALB]</a> for the last direction.</p>
       </article>
