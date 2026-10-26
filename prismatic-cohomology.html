@@ -30,8 +30,9 @@
     caption { text-align: left; font-weight: bold; margin-bottom: 0.5em; }
     th, td { padding: 0.6em 0.7em; vertical-align: top; border-bottom: 1px solid #ccc; }
     thead th { border-top: 1px solid #222; border-bottom: 1px solid #222; }
-    .schedule { min-width: 580px; }
-    .schedule td:nth-child(2) { white-space: nowrap; }
+    .schedule { min-width: 680px; }
+    .schedule td:nth-child(2),
+    .schedule td:nth-child(5) { white-space: nowrap; }
     .cohomology-table { min-width: 580px; }
     .cohomology-table th:first-child { width: 28%; }
     .math-display { overflow-x: auto; overflow-y: hidden; padding: 0.3em 0; }
@@ -120,18 +121,18 @@
         <table class="schedule">
           <caption>October–December 2026</caption>
           <thead>
-            <tr><th scope="col">Meeting</th><th scope="col">Date</th><th scope="col">Topic</th><th scope="col">Room</th></tr>
+            <tr><th scope="col">Meeting</th><th scope="col">Date</th><th scope="col">Topic</th><th scope="col">Room</th><th scope="col">Speaker</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">1</th><td><time datetime="2026-10-22">Thu 22 October</time></td><td><a href="#talk-1">A geometric motivation; the comparison problem</a></td><td>Huxley 410</td></tr>
-            <tr><th scope="row">2</th><td><time datetime="2026-10-30">Fri 30 October</time></td><td><a href="#talk-2">\(\delta\)-rings, prisms and the \(A_{\mathrm{inf}}\) example</a></td><td>Huxley 642</td></tr>
-            <tr><th scope="row">3</th><td><time datetime="2026-11-06">Fri 6 November</time></td><td><a href="#talk-3">The prismatic site and its cohomology</a></td><td>Huxley 642</td></tr>
-            <tr><th scope="row">4</th><td><time datetime="2026-11-13">Fri 13 November</time></td><td><a href="#talk-4">Crystalline, Hodge–Tate and de Rham comparisons</a></td><td>Huxley 642</td></tr>
-            <tr><th scope="row">5</th><td><time datetime="2026-11-20">Fri 20 November</time></td><td><a href="#talk-5">Étale comparison and integral consequences</a></td><td>Huxley 642</td></tr>
-            <tr><th scope="row">6</th><td><time datetime="2026-11-27">Fri 27 November</time></td><td><a href="#talk-6">Essential dimension I: restriction of mod-\(p\) cohomology</a></td><td>Huxley 642</td></tr>
-            <tr><th scope="row">7</th><td><time datetime="2026-12-03">Thu 3 December</time></td><td><a href="#talk-7">Essential dimension II: incompressibility of covers</a></td><td>Huxley 410</td></tr>
-            <tr><th scope="row">8</th><td><time datetime="2026-12-11">Fri 11 December</time></td><td><a href="#talk-8">Wild Brauer classes I: the cohomological input</a></td><td>Huxley 642</td></tr>
-            <tr><th scope="row">9</th><td><time datetime="2026-12-18">Fri 18 December</time></td><td><a href="#talk-9">Wild Brauer classes II: slopes and arithmetic</a></td><td>Huxley 642</td></tr>
+            <tr><th scope="row">1</th><td><time datetime="2026-10-22">Thu 22 October</time></td><td><a href="#talk-1">A geometric motivation; the comparison problem</a></td><td>Huxley 410</td><td>Olivier</td></tr>
+            <tr><th scope="row">2</th><td><time datetime="2026-10-30">Fri 30 October</time></td><td><a href="#talk-2">\(\delta\)-rings, prisms and the \(A_{\mathrm{inf}}\) example</a></td><td>Huxley 642</td><td>Daniel</td></tr>
+            <tr><th scope="row">3</th><td><time datetime="2026-11-06">Fri 6 November</time></td><td><a href="#talk-3">The prismatic site and its cohomology</a></td><td>Huxley 642</td><td>Calle</td></tr>
+            <tr><th scope="row">4</th><td><time datetime="2026-11-13">Fri 13 November</time></td><td><a href="#talk-4">Crystalline, Hodge–Tate and de Rham comparisons</a></td><td>Huxley 642</td><td>Ana</td></tr>
+            <tr><th scope="row">5</th><td><time datetime="2026-11-20">Fri 20 November</time></td><td><a href="#talk-5">Étale comparison and integral consequences</a></td><td>Huxley 642</td><td>Olivier</td></tr>
+            <tr><th scope="row">6</th><td><time datetime="2026-11-27">Fri 27 November</time></td><td><a href="#talk-6">Essential dimension I: restriction of mod-\(p\) cohomology</a></td><td>Huxley 642</td><td>Olivier</td></tr>
+            <tr><th scope="row">7</th><td><time datetime="2026-12-03">Thu 3 December</time></td><td><a href="#talk-7">Essential dimension II: incompressibility of covers</a></td><td>Huxley 410</td><td>—</td></tr>
+            <tr><th scope="row">8</th><td><time datetime="2026-12-11">Fri 11 December</time></td><td><a href="#talk-8">Wild Brauer classes I: the cohomological input</a></td><td>Huxley 642</td><td>Rachel</td></tr>
+            <tr><th scope="row">9</th><td><time datetime="2026-12-18">Fri 18 December</time></td><td><a href="#talk-9">Wild Brauer classes II: slopes and arithmetic</a></td><td>Huxley 642</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
@@ -140,155 +141,191 @@
     <section id="introduction">
       <h2>Introduction</h2>
       <p>
-        Prismatic cohomology gives a common source for several cohomology theories; its central achievement
-        is a system of <em>integral comparison theorems</em>: one cohomology theory recovers de Rham cohomology
-        of the total space, crystalline cohomology of the special fibre, and \(p\)-adic étale cohomology of
-        the geometric generic fibre. Working integrally means that we keep track of \(p\)-power torsion,
-        rather than passing to \(\mathbf{Q}_p\).
-      </p>
-      <p>
-        Let \(K/\mathbf{Q}_p\) be a finite field extension with ring of integers \(\mathcal{O}_K\),
-        residue field \(k\), and uniformiser \(\pi\). Consider a smooth projective morphism
+        The opening talk began with Grothendieck’s “mysterious functor” problem. For a smooth
+        projective variety \(X/\mathbf{Q}_p\), there are two canonical \(\mathbf{Q}_p\)-vector spaces
       </p>
       <div class="math-display">
-        \[X \longrightarrow S = \operatorname{Spec}(\mathcal{O}_K).\]
+        \[H^i_{\mathrm{\acute{e}t}}(X_{\overline{\mathbf{Q}}_p},\mathbf{Q}_p)
+        \qquad\text{and}\qquad
+        H^i_{\mathrm{dR}}(X/\mathbf{Q}_p).\]
       </div>
       <p>
-        The generic fibre \(X_\eta = X_K\) is defined over a field of characteristic zero, while the special
-        fibre \(X_0 = X_k\) is defined over a field of characteristic \(p\). There are several natural ways
-        to study this family:
+        Classical \(p\)-adic Hodge theory relates them after extending scalars: the Hodge–Tate
+        decomposition uses \(C=\mathbf{C}_p\), while the de Rham comparison uses Fontaine’s period
+        ring \(B_{\mathrm{dR}}\). These comparisons explain the Hodge filtration and the Galois action,
+        but they are not integral: after inverting \(p\), all \(p\)-power torsion is lost.
       </p>
-      <div class="table-scroll" role="region" aria-label="Cohomology theories" tabindex="0">
+      <p>
+        Let now \(X\to\operatorname{Spec}(\mathbf{Z}_p)\) be smooth and projective, with generic fibre
+        \(X_\eta\) and special fibre \(X_0\). Several integral cohomology theories naturally occur:
+      </p>
+      <div class="table-scroll" role="region" aria-label="Integral cohomology theories" tabindex="0">
         <table class="cohomology-table">
           <thead>
             <tr><th scope="col">Cohomology</th><th scope="col">Main features</th></tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">\(H^i_{\mathrm{dR}}(X/\mathcal{O}_K)\)</th>
-              <td>Differential forms on the whole family. After inverting \(p\), this becomes the de Rham cohomology of the generic fibre \(X_K\), equipped with its Hodge filtration.</td>
+              <th scope="row">\(H^i_{\mathrm{\acute{e}t}}(X_{\bar\eta},\mathbf{Z}_p)\) and \(H^i_{\mathrm{\acute{e}t}}(X_{\bar\eta},\mathbf{F}_p)\)</th>
+              <td>Étale cohomology of the geometric generic fibre, equipped with its Galois action.</td>
             </tr>
             <tr>
-              <th scope="row">\(H^i_{\mathrm{crys}}(X_0/W(k))\)</th>
-              <td>Crystalline cohomology of the special fibre, equipped with Frobenius. Here \(W(k)\) is the unramified extension of \(\mathbf{Z}_p\) with residue field \(k\).</td>
+              <th scope="row">\(H^i_{\mathrm{dR}}(X/\mathbf{Z}_p)\)</th>
+              <td>De Rham cohomology of the total space. After inverting \(p\), it recovers \(H^i_{\mathrm{dR}}(X_\eta/\mathbf{Q}_p)\).</td>
             </tr>
             <tr>
-              <th scope="row">\(H^i_{\mathrm{\acute{e}t}}(X_{\overline{K}},\mathbf{Z}_p)\)</th>
-              <td>Étale cohomology of the geometric generic fibre, equipped with the \(\operatorname{Gal}(\overline{K}/K)\) action.</td>
+              <th scope="row">\(H^i_{\mathrm{crys}}(X_0/\mathbf{Z}_p)\)</th>
+              <td>Crystalline cohomology of the special fibre, equipped with Frobenius.</td>
+            </tr>
+            <tr>
+              <th scope="row">\(H^i_{\mathrm{dR}}(X_0/\mathbf{F}_p)\)</th>
+              <td>De Rham cohomology of the special fibre, obtained from crystalline cohomology by derived reduction modulo \(p\).</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p>
-        Comparing these cohomology groups is a central problem of \(p\)-adic Hodge theory. Prismatic cohomology
-        yields a very clean way to do exactly that, while also keeping track of mod-\(p\) information
-        (which is invisible in the more classical setting of \(p\)-adic Hodge theory, where one usually
-        inverts \(p\) in the coefficient rings). The prismatic site puts comparison theories into one framework
-        and yields new integral consequences, thereby constituting a reorganisation of the foundations of
-        integral \(p\)-adic Hodge theory.
+        The motivating question is whether these theories, together with their additional structures,
+        can be recovered from one integral object. Prismatic cohomology provides such an object: a
+        single cohomology complex, equipped with Frobenius and cup products, whose different
+        specialisations recover de Rham, crystalline and étale cohomology. It therefore reorganises
+        integral \(p\)-adic Hodge theory while retaining torsion information.
       </p>
 
       <h3>Goal of this learning seminar</h3>
       <p>The aim of this learning seminar is to:</p>
       <ol>
-        <li>Learn the basics of the foundations of prismatic cohomology.</li>
-        <li>Study and understand the various comparison theorems.</li>
-        <li>Learn to work with prismatic cohomology by working out some beautiful examples and applications.</li>
+        <li>Learn the foundations: \(\delta\)-rings, prisms, the prismatic site and its structure sheaf.</li>
+        <li>Understand the de Rham, crystalline, Hodge–Tate and étale comparison theorems.</li>
+        <li>Work through applications to torsion, essential dimension and weak approximation.</li>
       </ol>
     </section>
 
     <section id="comparisons">
       <h2>A little bit more detail</h2>
       <p>
-        Consider the smooth projective family \(X/\mathcal{O}_K\). One may ask:
-        <em>Can the above different cohomology groups, together with their additional structures, be recovered
-        from a single integral object?</em> This leads one to consider Breuil–Kisin prisms.
-        Let \(A = W(k)[[u]]\), let \(\theta:A\to\mathcal{O}_K\) send \(u\) to \(\pi\), and write
-        \(I = \ker\theta = (E(u))\), with \(E\) Eisenstein. Equip \(A\) with Witt-vector Frobenius on \(W(k)\)
-        and \(\varphi_A(u)=u^p\). The pair \((A,I)\) is the <em>Breuil–Kisin prism</em>.
-        For the \(p\)-adic completion \(\widehat{X}\), there are finitely generated \(A\)-modules
-      </p>
-      <div class="math-display">\[H^i_\Delta(\widehat{X}/A).\]</div>
-      <p>
-        They have cup products and a semilinear Frobenius \(F\), so \(F(ax)=\varphi_A(a)F(x)\).
-        The induced map
+        In the opening talk we worked over \(\mathbf{Z}_p\). Put
+        \(A=\mathbf{Z}_p[[u]]\), equip it with \(\varphi(u)=u^p\), and let \(I=(u-p)\).
+        Then \((A,I)\) is the Breuil–Kisin prism. We also use the crystalline prism
+        \((\mathbf{Z}_p,(p))\) and the perfect prism
+        \(A_{\mathrm{inf}}=W(\mathcal{O}_C^\flat)\), where \(C=\mathbf{C}_p\) and \(C^\flat=\operatorname{Frac}(\mathcal O_C^\flat)\).
+        If \(\theta:A_{\mathrm{inf}}\to\mathcal{O}_C\) is Fontaine’s map and
+        \(\xi=[p^\flat]-p\), then \(\ker(\theta)=(\xi)\). A compatible sequence of
+        \(p\)-power roots of \(p\) gives a noncanonical morphism of prisms
       </p>
       <div class="math-display">
-        \[H^i_\Delta(\widehat{X}/A)\otimes_{A,\varphi_A}A[1/E]
-        \xrightarrow{\sim}H^i_\Delta(\widehat{X}/A)[1/E]\]
+        \[(A,(u-p))\longrightarrow(A_{\mathrm{inf}},(\xi)),
+        \qquad u\longmapsto[p^\flat].\]
       </div>
       <p>
-        is an isomorphism. The different classical theories are recovered by changing coefficients in this
-        cohomology theory. Write \(H^i_\Delta(\widehat{X}/A;B,f)\) for prismatic cohomology with coefficients
-        changed along \(f:A\to B\): change coefficients in a projective cochain complex computing the theory,
-        then take its \(i\)-th cohomology.
+        For a smooth projective \(X/\mathbf{Z}_p\), writing \(X\) also for its \(p\)-adic
+        formal completion, prismatic cohomology produces a canonical object
       </p>
+      <div class="math-display">\[R\Gamma_\Delta(X/A)\in D(A),\]</div>
+      <p>equipped with Frobenius and cup products.</p>
 
       <h3>1. De Rham comparison</h3>
-      <p>With \(\alpha=\theta\circ\varphi_A\), there are natural isomorphisms</p>
+      <p>The Frobenius-twisted specialisation \(u\mapsto p^p\) gives</p>
       <div class="math-display">
-        \[H^i_\Delta(\widehat{X}/A;\mathcal{O}_K,\alpha)
-        \cong H^i_{\mathrm{dR}}(X/\mathcal{O}_K),\]
-        \[H^i_{\mathrm{dR}}(X/\mathcal{O}_K)\otimes_{\mathcal{O}_K}K
-        \cong H^i_{\mathrm{dR}}(X_K/K).\]
+        \[R\Gamma_\Delta(X/A)
+        \widehat\otimes^L_{A,\,u\mapsto p^p}\mathbf{Z}_p
+        \xrightarrow{\sim}R\Gamma_{\mathrm{dR}}(X/\mathbf{Z}_p).\]
       </div>
-      <p>Thus this specialisation recovers differential-form cohomology of the family and its generic fibre.</p>
+      <p>Over \(A_{\mathrm{inf}}\), the corresponding comparison is</p>
+      <div class="math-display">
+        \[R\Gamma_\Delta(X_{\mathcal O_C}/A_{\mathrm{inf}})
+        \widehat\otimes^L_{A_{\mathrm{inf}},\,\theta\circ\varphi}\mathcal O_C
+        \xrightarrow{\sim}R\Gamma_{\mathrm{dR}}(X_{\mathcal O_C}/\mathcal O_C).\]
+      </div>
 
       <h3>2. Crystalline comparison</h3>
-      <p>
-        Let \(\beta:A\to W(k)\) send \(u\) to \(0\) and act by Witt-vector Frobenius on \(W(k)\). Then
-      </p>
+      <p>The morphism of prisms given by \(u\mapsto0\) yields</p>
       <div class="math-display">
-        \[H^i_\Delta(\widehat{X}/A;W(k),\beta)\cong H^i_{\mathrm{crys}}(X_0/W(k)),\]
+        \[R\Gamma_\Delta(X/A)
+        \widehat\otimes^L_{A,\,u\mapsto0}\mathbf{Z}_p
+        \xrightarrow{\sim}R\Gamma_{\mathrm{crys}}(X_0/\mathbf{Z}_p).\]
       </div>
       <p>
-        compatibly with Frobenius. Changing coefficients further to \(k\), at the cochain level,
-        recovers \(H^i_{\mathrm{dR}}(X_0/k)\).
+        Derived reduction modulo \(p\) then recovers
+        \(R\Gamma_{\mathrm{dR}}(X_0/\mathbf{F}_p)\). In this unramified lifting situation,
+        the de Rham and crystalline complexes are also canonically isomorphic.
       </p>
 
-      <h3>3. Hodge–Tate comparison</h3>
-      <p>
-        The untwisted specialisation along \(\theta\) is governed by the groups of differential forms.
-        Put \(L=I/I^2\), an invertible \(\mathcal{O}_K\)-module. There is a spectral sequence of cohomology groups
-      </p>
+      <h3>3. Étale comparison</h3>
+      <p>After base change to \(A_{\mathrm{inf}}\) and reduction modulo \(p\), one has</p>
       <div class="math-display">
-        \[E_2^{a,b}=H^a(X,\Omega^b_{X/\mathcal{O}_K})\otimes_{\mathcal{O}_K}L^{\otimes(-b)}
-        \Longrightarrow H^{a+b}_\Delta(\widehat{X}/A;\mathcal{O}_K,\theta).\]
+        \[\left(
+        R\Gamma_\Delta(X_{\mathcal O_C}/A_{\mathrm{inf}})
+        \otimes^L_{A_{\mathrm{inf}}}C^\flat
+        \right)^{\varphi=1}
+        \xrightarrow{\sim}
+        R\Gamma_{\mathrm{\acute{e}t}}(X_C,\mathbf{F}_p),\]
+      </div>
+      <p>where \((\varphi=1)\) denotes derived Frobenius fixed points. Equivalently, after linearisation,</p>
+      <div class="math-display">
+        \[R\Gamma_\Delta(X_{\mathcal O_C}/A_{\mathrm{inf}})
+        \otimes^L_{A_{\mathrm{inf}}}C^\flat
+        \simeq
+        R\Gamma_{\mathrm{\acute{e}t}}(X_C,\mathbf{F}_p)
+        \otimes_{\mathbf{F}_p}C^\flat.\]
       </div>
       <p>
-        The terms with \(a+b=i\) contribute to degree \(i\). Integral degeneration or a direct-sum
-        decomposition is not being asserted.
+        The prism diagram also contains the Hodge–Tate specialisation; its comparison theorem is
+        developed in detail in <a href="#talk-4">meeting 4</a>.
       </p>
 
-      <h3>4. Étale comparison</h3>
+      <h3>4. Base change and mod-\(p\) consequences</h3>
       <p>
-        Set \(C=\widehat{\overline{K}}\), let \(\mathcal{O}_C^\flat\) be its tilt, and put
-        \(C^\flat=\operatorname{Frac}(\mathcal{O}_C^\flat)\). The rings
-        \(A_{\mathrm{inf}}=W(\mathcal{O}_C^\flat)\) and \(B=W(C^\flat)\) will be explained in
-        <a href="#talk-2">meeting 2</a>. Base change of the family to \(\mathcal{O}_C\) gives
+        A morphism of bounded prisms \((A,I)\to(B,J)\) gives completed base change
       </p>
       <div class="math-display">
-        \[P_C^i:=H^i_\Delta(\widehat{X}_{\mathcal{O}_C}/A_{\mathrm{inf}};B)
-        \cong H^i_{\mathrm{\acute{e}t}}(X_{\overline{K}},\mathbf{Z}_p)\otimes_{\mathbf{Z}_p}B.\]
+        \[R\Gamma_\Delta(X/A)\widehat\otimes_A^L B
+        \xrightarrow{\sim}R\Gamma_\Delta(X_{B/J}/B).\]
       </div>
       <p>
-        Here the coefficient map is the natural inclusion \(A_{\mathrm{inf}}\to B\).
-        The comparison respects Galois actions; Frobenius on the right acts only on \(B\).
-        Since \(B^{F=1}=\mathbf{Z}_p\), it also gives
+        Put
+        \(R\Gamma_{\Delta/p}(X_{\mathcal O_C}/A_{\mathrm{inf}})
+        =R\Gamma_\Delta(X_{\mathcal O_C}/A_{\mathrm{inf}})\otimes^L_{A_{\mathrm{inf}}}\mathcal O_C^\flat\).
+        Viewing \(\overline{\mathbf F}_p\) as an \(\mathcal O_C^\flat\)-module through Frobenius
+        followed by the residue map, one obtains
       </p>
       <div class="math-display">
-        \[H^i_{\mathrm{\acute{e}t}}(X_{\overline{K}},\mathbf{Z}_p)\cong(P_C^i)^{F=1},\]
+        \[0\longrightarrow
+        H^i_{\Delta/p}(X_{\mathcal O_C}/A_{\mathrm{inf}})
+        \otimes_{\mathcal O_C^\flat,\varphi}\overline{\mathbf F}_p
+        \longrightarrow H^i_{\mathrm{dR}}(X_{\overline{\mathbf F}_p})
+        \longrightarrow
+        \operatorname{Tor}^{\mathcal O_C^\flat}_1
+        \!\left(H^{i+1}_{\Delta/p}(X_{\mathcal O_C}/A_{\mathrm{inf}}),\overline{\mathbf F}_p\right)
+        \longrightarrow0,\]
+      </div>
+      <p>and</p>
+      <div class="math-display">
+        \[H^i_{\mathrm{\acute{e}t}}(X_C,\mathbf F_p)\otimes_{\mathbf F_p}C^\flat
+        \xrightarrow{\sim}
+        H^i_{\Delta/p}(X_{\mathcal O_C}/A_{\mathrm{inf}})\otimes_{\mathcal O_C^\flat}C^\flat.\]
+      </div>
+
+      <h3>5. The site, the sheaf and the applications</h3>
+      <p>
+        For a bounded prism \((A,I)\) and a smooth \(p\)-adic formal scheme \(X/(A/I)\),
+        the prismatic site has objects \((B,J)\) over \((A,I)\), together with maps
+        \(\operatorname{Spf}(B/J)\to X\). Its structure sheaf sends \((B,J)\) to \(B\), and
+      </p>
+      <div class="math-display">
+        \[R\Gamma_\Delta(X/A)=R\Gamma((X/A)_\Delta,\mathcal O_\Delta).\]
       </div>
       <p>
-        where \(F=1\) now means ordinary fixed elements of a cohomology group.
-        Compatible roots of \(\pi\) give the prism map \(A\to A_{\mathrm{inf}}\)
-        linking this comparison to the original theory.
+        The opening talk concluded with applications: the Bhatt–Morrow–Scholze torsion inequality,
+        their surface showing that integral étale and crystalline cohomology need not be abstractly
+        isomorphic, the nonvanishing of \(H^1_{\mathrm{dR}}\) for Enriques surfaces in characteristic
+        \(2\), the Farb–Kisin–Wolfson incompressibility theorem, and the Ambrosi–Newton–Pagano
+        obstruction to weak approximation.
       </p>
       <p>
-        <em>Some references:</em> <a href="#ref-bs">[BS]</a>, Theorem 1.8 and Example 1.9;
-        <a href="#ref-bms2">[BMS2]</a>, Theorem 1.2; <a href="#ref-bms1">[BMS1]</a>, Theorem 1.8
-        for the étale comparison; <a href="#ref-k">[K]</a>, Theorem 23.2.5 for the torsion inequality.
-        See also <a href="#ref-fkw">[FKW]</a>, §2.1.
+        <em>Some references:</em> <a href="#ref-bs">[BS]</a>, Theorems 1.8 and 9.1;
+        <a href="#ref-bms1">[BMS1]</a>; <a href="#ref-k">[K]</a>, §§1 and 23;
+        <a href="#ref-fkw">[FKW]</a>, §2.1; and <a href="#ref-anp">[ANP]</a>.
       </p>
     </section>
 
@@ -300,15 +337,20 @@
         <h4>1. Motivation and the comparison problem</h4>
         <p class="talk-date">Thursday 22 October 2026 · 10:00–12:00 · Huxley 410</p>
         <p>
-          Introduce \(X/\mathcal{O}_K\), its two fibres and the three cohomology theories in the
-          <a href="#introduction">introduction</a>. Explain the Hodge, Frobenius and Galois structures,
-          and why retaining \(p\)-torsion matters. Describe the purpose of crystalline thickenings informally,
-          and preview how differential forms constrain mod-\(p\) restriction maps and lead to the two applications.
-          As a guiding example, describe degree-one cohomology of an elliptic curve with good reduction and
-          explain what the common prismatic complex must remember.
+          Begin with Grothendieck’s mysterious functor problem for a smooth projective variety over
+          \(\mathbf Q_p\). Recall the comparison between singular and de Rham cohomology over
+          \(\mathbf C\), the Hodge–Tate decomposition and the \(B_{\mathrm{dR}}\)-comparison, and
+          explain why these rational comparisons lose torsion. For a smooth projective
+          \(X/\mathbf Z_p\), introduce the integral étale, de Rham and crystalline theories and ask
+          whether they arise from one object. Define prisms and work through the Breuil–Kisin,
+          perfect and crystalline examples. State the de Rham, crystalline, étale and base-change
+          comparisons, describe the prismatic site and its structure sheaf, and conclude with the
+          torsion inequality and the applications to Enriques surfaces, essential dimension and weak
+          approximation.
         </p>
-        <p><strong>Scope:</strong> State the comparison package informally; no crystalline-site construction or proofs.</p>
-        <p><strong>Reading:</strong> <a href="#ref-b">[B]</a>, I; <a href="#ref-k">[K]</a>, §1; <a href="#ref-fkw">[FKW]</a> and <a href="#ref-anp">[ANP]</a>, introductions; [N1]. <a href="#ref-bdj">[BdJ]</a> is background.</p>
+        <p><strong>Scope:</strong> Give the definitions and principal comparison statements, together with the elementary deductions used in the applications; do not prove the general comparison theorems.</p>
+        <p><strong>Notes:</strong> <a href="prismatic_notes_degaayfortman.pdf">Talk notes (PDF)</a>.</p>
+        <p><strong>Reading:</strong> <a href="#ref-k">[K]</a>, §§1.1–1.4; <a href="#ref-bs">[BS]</a>, introduction and Theorems 1.8 and 9.1; <a href="#ref-bms1">[BMS1]</a>, introduction; <a href="#ref-fkw">[FKW]</a> and <a href="#ref-anp">[ANP]</a>, introductions. <a href="#ref-bdj">[BdJ]</a> is background.</p>
       </article>
 
       <article id="talk-2">
